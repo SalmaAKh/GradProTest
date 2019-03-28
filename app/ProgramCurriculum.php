@@ -11,7 +11,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
  * Class ProgramCurriculum
- * 
+ *
  * @property int $id
  * @property int $department_id
  * @property int $course_code
@@ -21,7 +21,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property int $credit
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * 
+ *
  * @property \App\Department $department
  * @property \Illuminate\Database\Eloquent\Collection $offered_courses
  *
@@ -33,8 +33,7 @@ class ProgramCurriculum extends Eloquent
 
 	protected $casts = [
 		'department_id' => 'int',
-		'course_code' => 'int',
-		'credit' => 'int'
+ 		'credit' => 'int'
 	];
 
 	protected $fillable = [
