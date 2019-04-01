@@ -12,5 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    $p=new \App\Http\Controllers\Ginatic_Int();
+    $p->initialize();
+
+
+
 });

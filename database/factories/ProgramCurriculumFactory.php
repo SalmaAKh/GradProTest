@@ -10,8 +10,7 @@ $factory->define(App\ProgramCurriculum::class, function (Faker $faker) {
          'year' => rand(1,4),
         'credit' => rand(3,4),
         'department_id' => 1,
-
-
+        'lab_type'=> rand(0,2)
 
     ];
 });

@@ -47,6 +47,7 @@ class OfferedCourse extends Eloquent
 		'room_id'
 	];
 
+
 	public function program_curriculum()
 	{
 		return $this->belongsTo(\App\ProgramCurriculum::class);

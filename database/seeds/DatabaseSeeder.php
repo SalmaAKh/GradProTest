@@ -12,7 +12,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-
         \App\Day::firstorcreate( ["name"=>"Monday"]);
         \App\Day::firstorcreate( ["name"=>"Tuesday"]);
         \App\Day::firstorcreate( ["name"=>"Wednesday"]);
@@ -27,7 +26,7 @@ class DatabaseSeeder extends Seeder
 
 
         factory(App\Department::class, 2)->create();
-        factory(App\Instructor::class, 100)->create()->each(function ($instructor) {
+        factory(App\Instructor::class, 50)->create()->each(function ($instructor) {
 
 
                 factory(App\ConstrainHour::class, rand(0,4))->create(['instructor_id'=>$instructor->id]);

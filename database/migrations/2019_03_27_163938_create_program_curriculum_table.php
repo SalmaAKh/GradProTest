@@ -21,6 +21,7 @@ class CreateProgramCurriculumTable extends Migration {
 			$table->string('year', 10);
 			$table->string('semester', 10);
 			$table->integer('credit');
+			$table->integer('lab_type');
             $table->timestamps();
 		});
 	}
