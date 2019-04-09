@@ -11,5 +11,6 @@ $factory->define(App\OfferedCourse::class, function (Faker $faker) {
         'day_id' => rand(1,5),
         'hour_id' => rand(1,5),
         'room_id' => rand(1,24),
+        'event_type' => rand(1,3),
     ];
 });

@@ -13,8 +13,9 @@
 
 Route::get('/', function () {
     //return view('welcome');
-    $p=new \App\Http\Controllers\Ginatic_Int();
+    $p=new App\Http\Controllers\Genatic_Algotrthm\Ginatic_Int();
     $p->initialize();
+
 
 
 

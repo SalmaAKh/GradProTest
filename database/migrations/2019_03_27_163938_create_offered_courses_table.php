@@ -20,6 +20,7 @@ class CreateOfferedCoursesTable extends Migration {
 			$table->integer('day_id')->nullable()->index('offered_courses_fk2');
 			$table->integer('hour_id')->nullable()->index('offered_courses_fk3');
 			$table->integer('room_id')->nullable()->index('offered_courses_fk4');
+			$table->integer('event_type')->nullable();
             $table->timestamps();
 		});
 	}

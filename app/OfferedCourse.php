@@ -44,8 +44,15 @@ class OfferedCourse extends Eloquent
 		'instructor_id',
 		'day_id',
 		'hour_id',
-		'room_id'
+		'room_id',
+        'even_type'
 	];
+
+	protected $appends = ['semester'];
+
+	public function getSemesterAttribute(){
+	    return $this->program_curriculum()->first()->semester;
+    }
 
 
 	public function program_curriculum()
