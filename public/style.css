@@ -1,0 +1,10 @@
+.portlet.blue, .portlet.box.blue>.portlet-title, .portlet>.portlet-body.blue {
+    background-color: #2b3643;
+}
+
+.portlet.box.blue-hoki>.portlet-title>.actions .btn-default {
+
+    padding: 8px;
+}
+
+
