@@ -1,69 +1,81 @@
 @extends('template.template')
 
+@section('style')
+    <link href="./assets/vendors/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+@stop
+@section('script')
+    <script src="./assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
+    <script>
+
+
+
+        jQuery(document).ready(function() {
+            var table = $('#kt_table_1');
+
+            // begin first table
+            table.DataTable();
+
+        });
+
+    </script>
+@stop
+
+
+
 @section('content')
 
- 
-
-<div class="col-md-12 ">
-                                <!-- BEGIN Portlet PORTLET-->
-                                <div class="portlet box blue-hoki">
-                                    <div class="portlet-title">
-                                        <div class="caption">
-                                            <i class="fa fa-gift"></i>Offered Courses </div>
-                                        <div class="actions">
-                                    
-                                            <a href="/api/admin/offered_course/new" class="btn btn-default btn-sm">
-                                                <i class="fa fa-plus"></i> Add  new course</a>
-                                        </div>
-                                    </div>
-                                    <div class="portlet-body">
-                               
-                                        
-
-<table id="example" class="display" style="width:100%">
-        <thead>
-            <tr>
-                <th>Course Code</th>
-                <th>Course Name</th>
-                <th>Instructor Name</th>
-                <th>Delete</th>
-               
-            </tr>
-        </thead>
-        <tbody>
-          @foreach(App\OfferedCourse::all() as $code)
-
-            <tr>
-                <td>{{$code->program_curriculum->course_code}}</td>
-                <td>{{$code->program_curriculum->course_name}}</td>
-                <td>{{$code->instructor->user->name}}</td>
-                <td>
-                    
-                    <button type="button" class="btn red">
-                                                                        <i class="fa fa-trash"></i> Delete</button>
-                
-                
-                </td>
-         
-           
-            </tr>
-            @endforeach
- 
-        </tbody>
-  
-    </table>
-
-                                        
-                                        
-                                        
-                                    </div>
-                                </div>
-                                <!-- END Portlet PORTLET-->
-                            </div>
 
 
 
+    <div class="kt-portlet kt-portlet--mobile">
+        <div class="kt-portlet__head kt-portlet__head--lg">
+            <div class="kt-portlet__head-label">
+			<span class="kt-portlet__head-icon">
+				<i class="kt-font-brand flaticon2-line-chart"></i>
+			</span>
+                <h3 class="kt-portlet__head-title">
+                    Basic
+                </h3>
+            </div>
+         </div>
 
+        <div class="kt-portlet__body">
+            <!--begin: Datatable -->
+            <table class="table table-striped- table-bordered table-hover table-checkable" id="kt_table_1">
+                <thead>
+                <tr>
+                     <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Instructor Name</th>
+                    <th>Delete</th>
+
+                </tr>
+                </thead>
+
+                <tbody>
+                @foreach(App\OfferedCourse::all() as $code)
+
+                    <tr>
+                         <td>{{$code->program_curriculum->course_code}}</td>
+                        <td>{{$code->program_curriculum->course_name}}</td>
+                        <td>{{$code->instructor->user->name}}</td>
+                        <td>
+
+                            <button type="button" class="btn red">
+                                <i class="fa fa-trash"></i> Delete</button>
+
+
+                        </td>
+
+
+                    </tr>
+                @endforeach
+                </tbody>
+
+            </table>
+            <!--end: Datatable -->
+        </div>
+    </div></div>
 
 
 

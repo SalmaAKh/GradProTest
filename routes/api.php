@@ -29,6 +29,37 @@ Route::prefix('admin')->group(function () {
         
         
     });
+    Route::get('time_table/view', function () {
+
+
+        return view('time_table.view');
+
+
+
+
+    });
+    Route::get('log/logIn', function () {
+
+
+        return view('log.logIn');
+
+
+
+
+    });
+    Route::get('log/admin', function () {
+
+
+        return view('log.admin');
+
+
+
+
+    });
+
+
+
+
     
     
     
