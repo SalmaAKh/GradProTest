@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Genatic_Algotrthm;
 
 use App\Hour;
 use App\Http\Controllers\Genatic_Algotrthm\Fitness_Function;
+use App\Http\Controllers\Genatic_Algotrthm\SelectionMethod;
+use App\Http\Controllers\Genatic_Algotrthm\CrossOver;
 use App\Instructor;
 use App\OfferedCourse;
 use App\Room;
@@ -22,9 +24,12 @@ class Ginatic_Int
     public $labs;
     public $offered_C;
     public $Events;
-    protected $PopulationSize = 2;
+    protected $PopulationSize = 5;
     public $CheckList;
     public $count;
+    public $childEvent;
+    public $Generation=0;
+    public $GenerationLimit=24;
 
 
     public function initialize()
@@ -32,12 +37,15 @@ class Ginatic_Int
         $this->day = Day::all()->toArray();
         $this->hour = Hour::all()->toArray();
         $this->instructorId = Instructor::all('id')->toArray(); //Due to DB conflict unusable ATM.
-
         $this->offered_C = OfferedCourse::all()->toArray();
         $this->rooms = Room::where('room_type', '=', 1)->get()->toArray();
         $this->labs = Room::where('room_type', '=', 2)->get()->toArray();
 
+
+
         $fitness=new Fitness_Function();
+        $Selection=new SelectionMethod();
+        $Crossover=new CrossOver();
         for ($i = 0; $i < $this->PopulationSize; $i++) {
 
             foreach ($this->offered_C as $key => $course) {
@@ -67,12 +75,40 @@ class Ginatic_Int
             }
 
             $this->Events[$i]=$fitness->Fitness($i,$this->Events,$this->instructorId,$this->rooms);
+
+        }
+
+        while($this->Generation<$this->GenerationLimit) {//start of gerating
+            $Selection->TotalFitness=0;
+            $childEvent=null;
+            $Fit=null;
+                foreach ($this->Events as $key => $event)
+                    $Fit[$key] = $Selection->FitnessSum($event);
+
+            highlight_string("<?php\n\$data =\n" . var_export( $Fit, true) . ";\n?>");
+
+            $Selection->Selection($Fit);
+
+            for($i=0;$i<$this->PopulationSize;$i++) {
+                $Parent1 = $Selection->getIndex();
+                do {
+                $Parent2 = $Selection->getIndex();
+                } while($Parent1==$Parent2);
+
+                $childEvent[$i] = $Crossover->Crossover($this->Events[$Parent1], $this->Events[$Parent2],$this->rooms,$this->labs);
+                //Muation Here
+                $childEvent[$i] = $fitness->Fitness($i, $childEvent, $this->instructorId, $this->rooms);
+            }
+            $this->Events=null;
+            $this->Events=$childEvent;
+            $this->Generation++;
+/*            highlight_string("<?php\n\$data =\n" . var_export('this is child', true) . ";\n?>");*/
+/*            highlight_string("<?php\n\$data =\n" . var_export($childEvent, true) . ";\n?>");*/
         }
 
 
-        highlight_string("<?php\n\$data =\n" . var_export($this->Events, true) . ";\n?>");
-
     }
+
 }
 
 
