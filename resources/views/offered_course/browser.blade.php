@@ -10,10 +10,8 @@
 
 
         jQuery(document).ready(function() {
-            var table = $('#kt_table_1');
 
-            // begin first table
-            table.DataTable();
+            $('#kt_table_1').DataTable();
 
         });
 
@@ -63,11 +61,7 @@
 
                             <button type="button" class="btn red">
                                 <i class="fa fa-trash"></i> Delete</button>
-
-
                         </td>
-
-
                     </tr>
                 @endforeach
                 </tbody>
@@ -76,8 +70,5 @@
             <!--end: Datatable -->
         </div>
     </div></div>
-
-
-
 
 @stop

@@ -125,13 +125,13 @@ License: You must have a valid license purchased only from themeforest(the above
             <div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed " data-ktheader-minimize="on">
                 <div class="kt-header__top">
                     <div class="kt-container">
+                        <img alt="Logo" style="position: absolute; right: 48%; width: 89px;" src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/EMU_Cyprus.svg/1200px-EMU_Cyprus.svg.png" class="kt-header__brand-logo-default" />
 
                         <!-- begin:: Brand -->
                         <div class="kt-header__brand   kt-grid__item" id="kt_header_brand">
                             <div class="kt-header__brand-logo">
                                 <a href="demo2/index.html">
-                                    <img alt="Logo" src="./assets/media/logos/logo-2.png" class="kt-header__brand-logo-default" />
-                                    <img alt="Logo" src="./assets/media/logos/logo-2-sm.png" class="kt-header__brand-logo-sticky" />
+                                    <img alt="Logo" width="35" src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/EMU_Cyprus.svg/1200px-EMU_Cyprus.svg.png" class="kt-header__brand-logo-sticky" />
                                 </a>
                             </div>
 
@@ -264,7 +264,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
                             <div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile ">
                                 <ul class="kt-menu__nav ">
-                                    <li class="kt-menu__item  kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Dashboards</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                    <li class="kt-menu__item  kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Admin</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                         <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
                                             <ul class="kt-menu__subnav">
                                                 <li class="kt-menu__item  kt-menu__item--active " aria-haspopup="true"><a href="demo2/index.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Default Dashboard</span></a></li>
@@ -273,7 +273,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Pages</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                    <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="http://localhost:8000/api/admin/offered_course/browser" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">OfferedCourses</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+
                                         <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
                                             <ul class="kt-menu__subnav">
                                                 <li class="kt-menu__item " aria-haspopup="true"><a href="javascript:;" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Create New Post</span></a></li>
@@ -305,7 +306,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Reports</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                    <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Add New Course</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                         <div class="kt-menu__submenu  kt-menu__submenu--fixed kt-menu__submenu--left" style="width:1000px">
                                             <div class="kt-menu__subnav">
                                                 <ul class="kt-menu__content">
@@ -356,7 +357,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Apps</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                    <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">TimeTable</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                         <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
                                             <ul class="kt-menu__subnav">
                                                 <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">eCommerce</span></a></li>
