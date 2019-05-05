@@ -24,12 +24,12 @@ class Ginatic_Int
     public $labs;
     public $offered_C;
     public $Events;
-    protected $PopulationSize = 5;
+    protected $PopulationSize = 110;
     public $CheckList;
     public $count;
     public $childEvent;
     public $Generation=0;
-    public $GenerationLimit=24;
+    public $GenerationLimit=100;
 
 
     public function initialize()
@@ -82,8 +82,9 @@ class Ginatic_Int
             $Selection->TotalFitness=0;
             $childEvent=null;
             $Fit=null;
-                foreach ($this->Events as $key => $event)
-                    $Fit[$key] = $Selection->FitnessSum($event);
+            $ChildFit=null;
+            foreach ($this->Events as $key => $event)
+                $Fit[$key] = $Selection->FitnessSum($event);
 
             highlight_string("<?php\n\$data =\n" . var_export( $Fit, true) . ";\n?>");
 
@@ -99,12 +100,43 @@ class Ginatic_Int
                 //Muation Here
                 $childEvent[$i] = $fitness->Fitness($i, $childEvent, $this->instructorId, $this->rooms);
             }
-            $this->Events=null;
-            $this->Events=$childEvent;
+            foreach ($childEvent as $key => $event)
+                $ChildFit[$key] = $Selection->FitnessSum($event);
+
+            //$this->Events=null;
+            //$this->Events=$childEvent;
+
+            $this->GetNextPopulation($childEvent,$Fit,$ChildFit);
             $this->Generation++;
 /*            highlight_string("<?php\n\$data =\n" . var_export('this is child', true) . ";\n?>");*/
 /*            highlight_string("<?php\n\$data =\n" . var_export($childEvent, true) . ";\n?>");*/
         }
+
+
+    }
+
+    private function GetNextPopulation($ChildPopulation, $ParentsFitness, $ChildesFitness)
+    {
+        $AllIndexes=array();
+        $AllFitness=array(); //Try array_merge()
+        for($i=0;$i<$this->PopulationSize;$i++) {
+            $AllIndexes[$i] = $i;
+            $AllFitness[$i]=$ParentsFitness[$i];
+        }
+        for($i=$this->PopulationSize;$i<2*$this->PopulationSize;$i++) {
+            $AllIndexes[$i] = $i;
+            $AllFitness[$i]=$ChildesFitness[$i - $this->PopulationSize];
+        }
+        array_multisort($AllFitness,SORT_DESC,$AllIndexes);
+        for($i=0;$i<$this->PopulationSize;$i++){
+            if($AllIndexes[$i]>=$this->PopulationSize)
+                $this->Events[$i]=$ChildPopulation[$AllIndexes[$i] - $this->PopulationSize];
+            else
+                $this->Events[$i]= $this->Events[$AllIndexes[$i]];
+           // $this->Events[$i]=  ($AllIndexes[$i]>$this->PopulationSize) ? $ChildPopulation[$AllIndexes[$i] - $this->PopulationSize] : $this->Events[$AllIndexes[$i]];
+        }
+
+
 
 
     }
