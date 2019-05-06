@@ -23,6 +23,10 @@ Route::prefix('admin')->group(function () {
         return view('log.admin');
 
     });
+    Route::get('instructor/table', function () {
+        return view('instructor.table');
+
+    });
 });
 
 
