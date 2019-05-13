@@ -16,38 +16,57 @@ use App\Http\Controllers\Genatic_Algotrthm\Fitness_Function;
 class SelectionMethod
 {
 
-public $TotalFitness=0;
-private $SelectionArray =array();
+    public $TotalFitness = 0;
+    private $SelectionArray = array();
 
-public function FitnessSum($events)
-{
-
-    $FitnessSum=0;
-
-        for($i=0;$i<sizeof($events);$i++)
-        {
-         $FitnessSum += $events[$i]['Fitness'];
-        }
-        $this->TotalFitness+=$FitnessSum;
-    return $FitnessSum;
-}
-
-
-
-
-public function Selection($FitnessArray)
-{
-    $index=0;
-    for($i=0;$i<sizeof($FitnessArray);$i++)
+    public function FitnessSum($events)
     {
-        $TimeTablePerc=round(($FitnessArray[$i]/$this->TotalFitness)*100);
 
-        for($j=0;$j<$TimeTablePerc;$j++,$index++)
-        {
-            $this->SelectionArray[$index]=$i;
+        $FitnessSum = 0;
+
+        for ($i = 0; $i < sizeof($events); $i++) {
+            $FitnessSum += $events[$i]['Fitness'];
+        }
+        $this->TotalFitness += $FitnessSum;
+        return $FitnessSum;
+    }
+
+
+    public function SelectionP1($FitnessArray)
+    {
+        while (1) {
+            for ($i = 0; $i < sizeof($FitnessArray); $i++){
+                $Randomfloat = rand(0, 10) / 10;
+            $EvantsFitnessperc = $FitnessArray[$i] / $this->TotalFitness;
+            if ($EvantsFitnessperc >= $Randomfloat)
+                return $i;
         }
     }
 }
+
+public function SelectionP2($FitnessArray)
+{
+    while (1) {
+        for ($i = 0; $i < sizeof($FitnessArray); $i++) {
+            $Randomfloat = rand(0, 10) / 10;
+            $EvantsFitnessperc = $FitnessArray[$i] / $this->TotalFitness;
+            if ($EvantsFitnessperc >= $Randomfloat)
+                return $i;
+        }
+    }
+}
+ //    $index=0;
+//
+//    for($i=0;$i<sizeof($FitnessArray);$i++)
+//    {
+//        $TimeTablePerc=round(($FitnessArray[$i]/$this->TotalFitness)*100);
+//
+//        for($j=0;$j<$TimeTablePerc;$j++,$index++)
+//        {
+//            $this->SelectionArray[$index]=$i;
+//        }
+//    }
+
     public function getIndex()
     {
         return $this->SelectionArray[rand(0,sizeof($this->SelectionArray)-1)];

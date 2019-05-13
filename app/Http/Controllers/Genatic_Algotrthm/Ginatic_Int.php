@@ -24,7 +24,7 @@ class Ginatic_Int
     public $labs;
     public $offered_C;
     public $Events;
-    protected $PopulationSize = 110;
+    protected $PopulationSize = 100;
     public $CheckList;
     public $count;
     public $childEvent;
@@ -58,7 +58,7 @@ class Ginatic_Int
 
                 //******LECTURE ASSIGNED TO TIME SLOT BEFORE 16:30*******
                 if($this->Events[$i][$key]['Event_Type']==1)
-                    $this->Events[$i][$key]['Time_slot'] =rand(0,4)*5*rand(0,3);
+                    $this->Events[$i][$key]['Time_slot'] =rand(0,4)*5+rand(0,3);
                  else
                 $this->Events[$i][$key]['Time_slot'] = rand(0, 24);
 
@@ -86,14 +86,11 @@ class Ginatic_Int
             foreach ($this->Events as $key => $event)
                 $Fit[$key] = $Selection->FitnessSum($event);
 
-            highlight_string("<?php\n\$data =\n" . var_export( $Fit, true) . ";\n?>");
-
-            $Selection->Selection($Fit);
 
             for($i=0;$i<$this->PopulationSize;$i++) {
-                $Parent1 = $Selection->getIndex();
                 do {
-                $Parent2 = $Selection->getIndex();
+                    $Parent1 = $Selection->SelectionP1($Fit);
+                    $Parent2 = $Selection->SelectionP2($Fit);
                 } while($Parent1==$Parent2);
 
                 $childEvent[$i] = $Crossover->Crossover($this->Events[$Parent1], $this->Events[$Parent2],$this->rooms,$this->labs);
@@ -111,6 +108,7 @@ class Ginatic_Int
 /*            highlight_string("<?php\n\$data =\n" . var_export('this is child', true) . ";\n?>");*/
 /*            highlight_string("<?php\n\$data =\n" . var_export($childEvent, true) . ";\n?>");*/
         }
+        highlight_string("<?php\n\$data =\n" . var_export(  $ChildFit, true) . ";\n?>");
 
 
     }
