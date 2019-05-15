@@ -29,7 +29,7 @@ class Ginatic_Int
     public $count;
     public $childEvent;
     public $Generation=0;
-    public $GenerationLimit=100;
+    public $GenerationLimit=60;
 
 
     public function initialize()
@@ -88,9 +88,11 @@ class Ginatic_Int
 
 
             for($i=0;$i<$this->PopulationSize;$i++) {
+                $BestFitindex=$Selection->selectionintialization($Fit);
+
+                $Parent1 = $Selection->SelectionP1($BestFitindex);
                 do {
-                    $Parent1 = $Selection->SelectionP1($Fit);
-                    $Parent2 = $Selection->SelectionP2($Fit);
+                    $Parent2 = $Selection->SelectionP1($BestFitindex);
                 } while($Parent1==$Parent2);
 
                 $childEvent[$i] = $Crossover->Crossover($this->Events[$Parent1], $this->Events[$Parent2],$this->rooms,$this->labs);
