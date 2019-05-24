@@ -20,18 +20,21 @@ class Fitness_Function //extends Ginatic_Int
     private $DiffLecture;
     private $EventByTimeSlot;
     private $EventByDay;
+    public $checkedcount=0;
     /**
      * @var array
      */
     private $labs=array();
 
 
-    public function Fitness($name, $Events, $instructorId, $rooms)
+    public function Fitness($name, $Events, $instructorId, $rooms,$labs)
     {
+        $this->checkedcount=0;
         $this->Events = $Events; //List of events
         $this->instructorId = $instructorId;  //List of instructors ID
         $this->name = $name; //Schedule ID
         $this->roomId = $rooms; //Room ID
+        $this->labs=$labs;
 
         $this->collection = collect($Events[$name]);
         for ($i = 0; $i < 25; $i++) //For each allowed timeslot
@@ -47,21 +50,25 @@ class Fitness_Function //extends Ginatic_Int
         {
             $this->EventByDay[$i] = $this->collection->filter(function ($value, $key) use ($i) //Filter out Events by timeslot (grouping)
             {
-                if ($value['Time_slot']/5 == $i)
+                if (floor($value['Time_slot']/5) == $i)
                     return $value;
             });
         }
 
 
-        foreach ($this->EventByTimeSlot as $time => $event) {
-            $this->InstructorConstraint($time);
-            $this->ClassRoomConstraint($time);
-            $this->SemesterConstraint($time);
+        foreach ($this->EventByTimeSlot  as $time => $event) {
+
+            if(sizeof($event) != 0) {
+                $this->InstructorConstraint($time);
+               $this->ClassRoomConstraint($time);
+               $this->SemesterConstraint($time);
+            }
         }
         foreach ($this->EventByDay as $day=> $event) {
-            $this->InstructorConstraintByDay($day);
+            if(sizeof($event) != 0) {
+                $this->InstructorConstraintByDay($event);
 
-
+            }
         }
         return $this->Events[$name];
     }
@@ -84,20 +91,16 @@ class Fitness_Function //extends Ginatic_Int
                     return $value;
             });
 
+
             if (sizeof($instructorList[$key]) == 1) // if only one instructor event per time slot
             {
                 foreach ($instructorList[$key] as $check) { // due to nature of data even if the result is one a foreach is required
                     $index = $check['My_Key'];              // in order to bypass the array indexing of the filter
                     $this->Events[$this->name][$index]['Fitness']++;
+
                 }
             }
 
-            else if(sizeof($instructorLabs[$key]) == 1){
-                foreach ($instructorLabs[$key] as $check) { // due to nature of data even if the result is one a foreach is required
-                    $index = $check['My_Key'];              // in order to bypass the array indexing of the filter
-                    $this->Events[$this->name][$index]['Fitness']++;
-                }
-            }
         }
     }
 
@@ -148,13 +151,13 @@ class Fitness_Function //extends Ginatic_Int
     private function ClassRoomConstraint($time)
     {
         $RoomListByTime = null;
+        $LabListByTime = null;
         foreach ($this->roomId as $key => $Room) {
             $searchID = $Room['room_id'];
             $RoomListByTime[$key] = $this->EventByTimeSlot[$time]->filter(function ($value, $key) use ($searchID) {
                 if ($searchID == $value['Rooms']) {
                     return $value;
                 }
-
             });
 
             if (sizeof($RoomListByTime[$key]) == 1) {
@@ -163,8 +166,21 @@ class Fitness_Function //extends Ginatic_Int
                     $this->Events[$this->name][$index]['Fitness']++;
                 }
             }
+        }
+        foreach ($this->labs as $key => $lab) {
+            $searchID = $lab['room_id'];
+            $labListByTime[$key] = $this->EventByTimeSlot[$time]->filter(function ($value, $key) use ($searchID) {
+                if ($searchID == $value['Rooms']) {
+                    return $value;
+                }
+            });
 
-
+            if (sizeof($labListByTime[$key]) == 1) {
+                foreach ($labListByTime[$key] as $check) {
+                    $index = $check['My_Key'];
+                    $this->Events[$this->name][$index]['Fitness']++;
+                }
+            }
         }
     }
 
@@ -208,43 +224,46 @@ class Fitness_Function //extends Ginatic_Int
             if (sizeof($CheckSemester[$i - 1]) == 1) {
                 foreach ($CheckSemester[$i - 1] as $check) {
                     $index = $check['My_Key'];
-                    $this->Events[$this->name][$index]['Fitness']++;
+                    $this->Events[$this->name][$index]['Fitness']+=1;
                 }
             }
+//            else {
+//                foreach ($CheckSemester[$i - 1] as $check) {
+//                    $index = $check['My_Key'];
+//                    $this->Events[$this->name][$index]['Fitness']-=2;
+//                }
+//            }
         }
 
     }
 
-    private function InstructorConstraintByDay($day)
+    private function InstructorConstraintByDay($event)
     {
         $instructorList = null;
 
         foreach ($this->instructorId as $key => $Instructor) {
             $searchID = $Instructor['id'];
-            $instructorList[$key] = $this->EventByDay[$day]->filter(function ($value, $key) use ($searchID) {
+            $instructorList[$key] = $event->filter(function ($value, $key) use ($searchID) {
                 if ($searchID == $value['Instructor_id'] && $value['Event_Type'] == 1)
                     return $value;
             });
 
-            $instructorLabs[$key] = $this->EventByTimeSlot[$day]->filter(function ( $value, $key) use ($searchID){
-                if($searchID == $value['Instructor_id'] && $value['Event_Type'] != 1)
-                    return $value;
-            });
 
-            if (sizeof($instructorList[$key]) <= 2) // if only one instructor event per time slot
+
+            if (sizeof($instructorList[$key]) <= 2 && sizeof($instructorList[$key]) > 0) // if only one instructor event per time slot
             {
                 foreach ($instructorList[$key] as $check) { // due to nature of data even if the result is one a foreach is required
                     $index = $check['My_Key'];              // in order to bypass the array indexing of the filter
-                    $this->Events[$this->name][$index]['Fitness']++;
+                    $this->Events[$this->name][$index]['Fitness']+=1;
                 }
             }
 
-            if(sizeof($instructorLabs[$key])){
+            /*if(sizeof($instructorLabs[$key]) && sizeof($instructorList[$key]) > 0) {
                 foreach ($instructorLabs[$key] as $check) { // due to nature of data even if the result is one a foreach is required
                     $index = $check['My_Key'];              // in order to bypass the array indexing of the filter
-                    $this->Events[$this->name][$index]['Fitness']++;
+                    $this->Events[$this->name][$index]['Fitness']+=2;
                 }
-            }
+            }*/
         }
     }
 

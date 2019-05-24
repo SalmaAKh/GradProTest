@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Genatic_Algotrthm;
 
+
 use App\Hour;
 use App\Http\Controllers\Genatic_Algotrthm\Fitness_Function;
 use App\Http\Controllers\Genatic_Algotrthm\SelectionMethod;
@@ -24,12 +25,18 @@ class Ginatic_Int
     public $labs;
     public $offered_C;
     public $Events;
-    protected $PopulationSize = 100;
+    protected $PopulationSize = 75;
     public $CheckList;
     public $count;
     public $childEvent;
     public $Generation=0;
-    public $GenerationLimit=60;
+    public $GenerationLimit=65;
+
+    public $OutputSchedule;
+    /**
+     * @var int
+     */
+    public $OutputFit;
 
 
     public function initialize()
@@ -74,34 +81,52 @@ class Ginatic_Int
 
             }
 
-            $this->Events[$i]=$fitness->Fitness($i,$this->Events,$this->instructorId,$this->rooms);
+            $this->Events[$i]=$fitness->Fitness($i,$this->Events,$this->instructorId,$this->rooms,$this->labs);
 
         }
+        $this->OutputSchedule=$this->Events[0];
+        $this->OutputFit=0;
+
 
         while($this->Generation<$this->GenerationLimit) {//start of gerating
             $Selection->TotalFitness=0;
             $childEvent=null;
             $Fit=null;
             $ChildFit=null;
+
             foreach ($this->Events as $key => $event)
+            {
                 $Fit[$key] = $Selection->FitnessSum($event);
+                if($Fit[$key]> $this->OutputFit)
+                {
+                    $this->OutputFit=$Fit[$key];
+                    $this->OutputSchedule=$event;
+                }
+            }
 
 
             for($i=0;$i<$this->PopulationSize;$i++) {
-                $BestFitindex=$Selection->selectionintialization($Fit);
 
-                $Parent1 = $Selection->SelectionP1($BestFitindex);
+
+                $Parent1 = $Selection->SelectionP1($Fit);
                 do {
-                    $Parent2 = $Selection->SelectionP1($BestFitindex);
+                    $Parent2 = $Selection->SelectionP1($Fit);
                 } while($Parent1==$Parent2);
 
                 $childEvent[$i] = $Crossover->Crossover($this->Events[$Parent1], $this->Events[$Parent2],$this->rooms,$this->labs);
                 //Muation Here
-                $childEvent[$i] = $fitness->Fitness($i, $childEvent, $this->instructorId, $this->rooms);
+                $childEvent[$i] = $fitness->Fitness($i, $childEvent, $this->instructorId, $this->rooms,$this->labs);
             }
             foreach ($childEvent as $key => $event)
+            {
                 $ChildFit[$key] = $Selection->FitnessSum($event);
+                if($ChildFit[$key]> $this->OutputFit)
+                {
+                    $this->OutputFit=$ChildFit[$key];
+                    $this->OutputSchedule=$event;
+                }
 
+            }
             //$this->Events=null;
             //$this->Events=$childEvent;
 
@@ -110,7 +135,8 @@ class Ginatic_Int
 /*            highlight_string("<?php\n\$data =\n" . var_export('this is child', true) . ";\n?>");*/
 /*            highlight_string("<?php\n\$data =\n" . var_export($childEvent, true) . ";\n?>");*/
         }
-        highlight_string("<?php\n\$data =\n" . var_export(  $ChildFit, true) . ";\n?>");
+        echo ($fitness->checkedcount);
+        return;
 
 
     }
@@ -140,6 +166,39 @@ class Ginatic_Int
 
 
     }
+
+
+    public function getScheduleDetails(){
+        $instructors =  Instructor::with('user')->get();
+        $instructors = collect($instructors);
+        $Hall =  Room::all();
+        $Hall = collect($Hall);
+        $courses =  OfferedCourse::with('program_curriculum')->get();
+        $courses = collect($courses);
+        $data=array();
+        $days=array("Monday", "Tuesday", "Wednesday", "Thursday", "Friday");
+
+        foreach ($this->OutputSchedule as $key=>$event){
+            $instructorName = $instructors->where('id',$event['Instructor_id'])->first()->user->name;
+            $hall_code = $event['Rooms'];
+            $course_name = $courses->where('program_curriculum_id',$event['Course_id'])->first()->program_curriculum->course_code;
+
+            $time=($event['Time_slot']);
+           if($event['Event_Type']!=1)
+                $course_name.=' - Lab';
+           else $course_name.= '-'.$instructorName;
+
+            $data[] = array("semester"=>$event['Semester'],"day"=>floor($time/5),'time_slot'=>$time%5,"hall_id"=>$hall_code,"instructor_name"=>$instructorName,"course_name"=>$course_name);
+        }
+        echo ($this->OutputFit);
+
+        $v =1;
+        return $data;
+    }
+
+
+
+
 
 }
 

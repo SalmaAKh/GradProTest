@@ -17,6 +17,9 @@ Route::get('/', function () {
     $p->initialize();
 
 
+    $data['data']=$p->getScheduleDetails();
+
+     return view('welcome',$data);
 
 
 });

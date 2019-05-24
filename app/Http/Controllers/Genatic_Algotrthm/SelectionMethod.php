@@ -17,48 +17,33 @@ class SelectionMethod
 {
 
     public $TotalFitness = 0;
-    protected $PopulationSize = 100;
     private $SelectionArray = array();
 
     public function FitnessSum($events)
     {
-
         $FitnessSum = 0;
 
         for ($i = 0; $i < sizeof($events); $i++) {
+            
             $FitnessSum += $events[$i]['Fitness'];
         }
+        if($FitnessSum<0)echo ($FitnessSum);
         $this->TotalFitness += $FitnessSum;
         return $FitnessSum;
     }
 
-    public function selectionintialization($FitnessArray){
 
-        $AllIndexes=array();
-        $AllFitness=array(); //Try array_merge()
-        for($i=0;$i<$this->PopulationSize;$i++) {
-            $AllIndexes[$i] = $i;
-            $AllFitness[$i]=$FitnessArray[$i];
-        }
-
-        array_multisort($AllFitness,SORT_DESC,$AllIndexes);
-
-        for ($i=0;$i<=20;$i++){
-            $bestfitness[$i]=$AllFitness[$i];
-            $newindex[$i]=$AllIndexes[$i];
-        }
-        return $newindex;
-    }
-
-
-    public function SelectionP1($BestfitIndix)
+    public function SelectionP1($FitnessArray)
     {
-                $rand=rand(0,20);
-                $par=$BestfitIndix[$rand];
-                return $par;
+        while (1) {
+            for ($i = 0; $i < sizeof($FitnessArray); $i++){
+            $Randomfloat = rand(0, 10) / 10;
+            $EvantsFitnessperc = $FitnessArray[$i] / $this->TotalFitness;
+            if ($EvantsFitnessperc >= $Randomfloat)
+                return $i;
+        }
     }
-
-
+}
  //    $index=0;
 //
 //    for($i=0;$i<sizeof($FitnessArray);$i++)
