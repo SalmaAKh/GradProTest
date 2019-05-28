@@ -98,7 +98,8 @@ License: You must have a valid license purchased only from themeforest(the above
                         <div class="kt-login__head">
                             <h3 class="kt-login__title"></h3>
                         </div>
-                        <form class="kt-form" action="">
+                        <form class="kt-form" action="{{route("login")}}">
+                            {{csrf_token()}}
                             <div class="input-group">
                                 <input class="form-control" type="text" placeholder="Email" name="email" autocomplete="off">
                             </div>
@@ -117,7 +118,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                             </div>
                             <div class="kt-login__actions">
-                                <button id="kt_login_signin_submit" class="btn btn-brand btn-pill kt-login__btn-primary">Sign In</button>
+
+                                <button id="kt_login_signin_submit" class="btn btn-brand btn-pill kt-login__btn-primary">Sign In
+                                    <a href="http://localhost:8000/api/admin/offered_course/browser"></a>
+                                </button>
                             </div>
                         </form>
                     </div>

@@ -39,4 +39,30 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function instructor()
+    {
+        return $this->hasMany(\App\Instructor::class);
+    }
+
+    public function administrators()
+    {
+        return $this->hasMany(\App\Administrator::class);
+    }
+
+    public function isAdministrator()
+    {
+        return $this->administrators()->count()>0;
+    }
+
+    public function isInstructor()
+    {
+        return $this->instructor()->count()>0;
+    }
+
+
+
+
+
+
 }

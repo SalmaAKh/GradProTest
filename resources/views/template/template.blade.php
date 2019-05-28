@@ -190,8 +190,8 @@ License: You must have a valid license purchased only from themeforest(the above
 
 
                                         <div class="kt-notification__custom kt-space-between">
-                                            <a href="http://localhost:8000/api/admin/log/logIn" target="_blank" class="btn btn-label btn-label-brand btn-sm btn-bold">Sign Out</a>
-
+                                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"target="_blank" class="btn btn-label btn-label-brand btn-sm btn-bold">Sign Out</a>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
                                         </div>
                                     </div>
 
@@ -213,19 +213,33 @@ License: You must have a valid license purchased only from themeforest(the above
                         <div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
                             <div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile ">
                                 <ul class="kt-menu__nav ">
+                                    @Admin
                                     <li class="kt-menu__item  kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Admin</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
 
                                     </li>
-                                    <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="http://localhost:8000/api/admin/offered_course/browser" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">OfferedCourses</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                    <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="http://127.0.0.1:8000/admin/offered_course/browser" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">OfferedCourses</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
 
 
                                     </li>
-                                    <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="http://localhost:8000/api/admin/offered_course/new" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Add New Course</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                    <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="http://127.0.0.1:8000/admin/offered_course/new" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Add New Course</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                         <div class="kt-menu__submenu  kt-menu__submenu--fixed kt-menu__submenu--left" style="width:1000px">
 
                                         </div>
                                     </li>
+
                                     <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">TimeTable</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+
+
+                                        @endAdmin
+                                        @Instructor
+
+
+
+                                    <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">TimeTable</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+
+                                        @endInstructor
+
+
 
                                     </li>
                                 </ul>

@@ -10,10 +10,8 @@
 
 
         jQuery(document).ready(function() {
-            var table = $('#kt_table_1');
 
-            // begin first table
-            table.DataTable();
+            $('#kt_table_1').DataTable();
 
         });
 
@@ -23,10 +21,6 @@
 
 
 @section('content')
-
-
-
-
     <div class="kt-portlet kt-portlet--mobile">
         <div class="kt-portlet__head kt-portlet__head--lg">
             <div class="kt-portlet__head-label">
@@ -54,20 +48,16 @@
 
                 <tbody>
                 @foreach(App\OfferedCourse::all() as $code)
-
                     <tr>
-                         <td>{{$code->program_curriculum->course_code}}</td>
+                        <td>{{$code->program_curriculum->course_code}}</td>
                         <td>{{$code->program_curriculum->course_name}}</td>
                         <td>{{$code->instructor->user->name}}</td>
                         <td>
-
-                            <button type="button" class="btn red">
-                                <i class="fa fa-trash"></i> Delete</button>
-
-
+                            <a  class="btn red" href="{{route('offeredcourse.delete',$code->program_curriculum->id)}}" style="padding-top: 5px;padding-bottom: 5px;    padding-right: 2px;    padding-left: 5px;
+" >
+                                <i class="flaticon-delete"></i>
+                            </a>
                         </td>
-
-
                     </tr>
                 @endforeach
                 </tbody>
@@ -76,8 +66,5 @@
             <!--end: Datatable -->
         </div>
     </div></div>
-
-
-
 
 @stop

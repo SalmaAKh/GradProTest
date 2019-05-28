@@ -27,12 +27,12 @@ class Ginatic_Int
     public $labs;
     public $offered_C;
     public $Events;
-    protected $PopulationSize = 45;
+    protected $PopulationSize = 5;
     public $CheckList;
     public $count;
     public $childEvent;
     public $Generation=0;
-    public $GenerationLimit=85;
+    public $GenerationLimit=5;
 
     public $OutputSchedule;
     /**
