@@ -48,17 +48,28 @@ class OfferedCourse extends Eloquent
         'even_type'
 	];
 
-	protected $appends = ['semester'];
+	protected $appends = ['semester','department_id'];
+
+
 
 	public function getSemesterAttribute(){
 	    return $this->program_curriculum()->first()->semester;
     }
 
 
+    public function getDepartmentIdAttribute(){
+	    return $this->program_curriculum()->first()->department_id;
+    }
+
 	public function program_curriculum()
 	{
 		return $this->belongsTo(\App\ProgramCurriculum::class);
 	}
+	public function department()
+	{
+		return $this->belongsTo(\App\Department::class);
+	}
+
 
 	public function instructor()
 	{

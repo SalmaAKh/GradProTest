@@ -45,6 +45,7 @@ class ProgramCurriculum extends Eloquent
 		'credit'
 	];
 
+
 	public function department()
 	{
 		return $this->belongsTo(\App\Department::class);

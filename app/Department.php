@@ -31,4 +31,5 @@ class Department extends Eloquent
 	{
 		return $this->hasMany(\App\ProgramCurriculum::class);
 	}
+
 }

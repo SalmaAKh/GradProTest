@@ -10,6 +10,8 @@ use App\Http\Controllers\Genatic_Algotrthm\CrossOver;
 use App\Instructor;
 use App\OfferedCourse;
 use App\Room;
+use\App\ProgramCurriculum;
+use\App\Department;
 use Illuminate\Http\Request;
 use App\Day;
 use vendor\project\StatusTest;
@@ -25,12 +27,12 @@ class Ginatic_Int
     public $labs;
     public $offered_C;
     public $Events;
-    protected $PopulationSize = 75;
+    protected $PopulationSize = 45;
     public $CheckList;
     public $count;
     public $childEvent;
     public $Generation=0;
-    public $GenerationLimit=65;
+    public $GenerationLimit=85;
 
     public $OutputSchedule;
     /**
@@ -62,6 +64,9 @@ class Ginatic_Int
                 $this->Events[$i][$key]['Semester'] = $course['semester'];
                 $this->Events[$i][$key]['Instructor_id'] = $course['instructor_id'];
                 $this->Events[$i][$key]['Event_Type']= $course['event_type'];
+                $this->Events[$i][$key]['group_id']= $course['group_id'];
+                $this->Events[$i][$key]['department_id']= $course['department_id'];
+
 
                 //******LECTURE ASSIGNED TO TIME SLOT BEFORE 16:30*******
                 if($this->Events[$i][$key]['Event_Type']==1)
@@ -81,7 +86,7 @@ class Ginatic_Int
 
             }
 
-            $this->Events[$i]=$fitness->Fitness($i,$this->Events,$this->instructorId,$this->rooms,$this->labs);
+            $this->Events[$i]=$fitness->Fitness($i,$this->Events,$this->instructorId,$this->rooms,$this->labs,$this->offered_C);
 
         }
         $this->OutputSchedule=$this->Events[0];
@@ -115,7 +120,7 @@ class Ginatic_Int
 
                 $childEvent[$i] = $Crossover->Crossover($this->Events[$Parent1], $this->Events[$Parent2],$this->rooms,$this->labs);
                 //Muation Here
-                $childEvent[$i] = $fitness->Fitness($i, $childEvent, $this->instructorId, $this->rooms,$this->labs);
+                $childEvent[$i] = $fitness->Fitness($i, $childEvent, $this->instructorId, $this->rooms,$this->labs , $this->offered_C);
             }
             foreach ($childEvent as $key => $event)
             {
@@ -125,7 +130,6 @@ class Ginatic_Int
                     $this->OutputFit=$ChildFit[$key];
                     $this->OutputSchedule=$event;
                 }
-
             }
             //$this->Events=null;
             //$this->Events=$childEvent;
@@ -137,8 +141,6 @@ class Ginatic_Int
         }
         echo ($fitness->checkedcount);
         return;
-
-
     }
 
     private function GetNextPopulation($ChildPopulation, $ParentsFitness, $ChildesFitness)
@@ -161,10 +163,6 @@ class Ginatic_Int
                 $this->Events[$i]= $this->Events[$AllIndexes[$i]];
            // $this->Events[$i]=  ($AllIndexes[$i]>$this->PopulationSize) ? $ChildPopulation[$AllIndexes[$i] - $this->PopulationSize] : $this->Events[$AllIndexes[$i]];
         }
-
-
-
-
     }
 
 
@@ -195,11 +193,6 @@ class Ginatic_Int
         $v =1;
         return $data;
     }
-
-
-
-
-
 }
 
 
