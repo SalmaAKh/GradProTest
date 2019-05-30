@@ -8,6 +8,7 @@
     <script>
 
 
+        $( "#offered_courses" ).addClass( "kt-menu__item--here" );
 
         jQuery(document).ready(function() {
 
@@ -47,13 +48,13 @@
                 </thead>
 
                 <tbody>
-                @foreach(App\OfferedCourse::all() as $code)
+                @foreach(\App\OfferedCourse::groupBy('program_curriculum_id','instructor_id')->get() as $code)
                     <tr>
                         <td>{{$code->program_curriculum->course_code}}</td>
                         <td>{{$code->program_curriculum->course_name}}</td>
                         <td>{{$code->instructor->user->name}}</td>
                         <td>
-                            <a  class="btn red" href="{{route('offeredcourse.delete',$code->program_curriculum->id)}}" style="padding-top: 5px;padding-bottom: 5px;    padding-right: 2px;    padding-left: 5px;
+                            <a  class="btn red" href="{{route('offeredcourse.delete',$code->id)}}" style="padding-top: 5px;padding-bottom: 5px;    padding-right: 2px;    padding-left: 5px;
 " >
                                 <i class="flaticon-delete"></i>
                             </a>
@@ -65,6 +66,8 @@
             </table>
             <!--end: Datatable -->
         </div>
-    </div></div>
+    </div>
+
+
 
 @stop

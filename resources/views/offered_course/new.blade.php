@@ -3,12 +3,36 @@
 
 
 
+@section('style')
+
+    <style>
+        .cloning:first-child ,  .cloning:nth-child(2){
+
+            margin-top: 0!important;
+        }
+    </style>
+    @stop
+
+@section('script')
+<script>
+    $( "#offered_courses" ).addClass( "kt-menu__item--here" );
+
+
+    $('#add_new').on('click', function() {
+
+
+        $('#clonable').clone().appendTo( "#base" );;
+
+    });
+</script>
+
+    @stop
 @section('content')
 
 
     <div class="container">
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-12" >
             <!--begin::Portlet-->
             <div class="kt-portlet">
                 <div class="kt-portlet__head">
@@ -35,12 +59,12 @@
                             </div>
 
                         </div>
-                        <div class="form-group row">
-                            <div class="col-lg-6">
+                        <div class="form-group row" id="base">
+                            <div class="col-lg-6 cloning " id="clonable" style="margin-top: 20px;">
                                 <label>Instructors:</label>
                                 <div class="kt-input-icon">
 
-                                    <select class="form-control" name="instructor_id">
+                                    <select class="form-control" name="instructor_id[]">
                                         @foreach(App\Instructor::all() as $Instructor)
                                             <option value="{{$Instructor->id}}">{{$Instructor->user->name}}</option>
                                         @endforeach
@@ -49,20 +73,7 @@
                                  </div>
                                 <span class="form-text text-muted"> Select the instructor </span>
                             </div>
-                            {{--<div class="col-lg-6">--}}
-                                {{--<label class="">Group Number:</label>--}}
-                                {{--<div class="kt-input-icon">--}}
 
-                                    {{--<select class="form-control" >--}}
-                                        {{--@foreach(App\Instructor::all() as $groupnum)--}}
-                                            {{--<option value="{{$groupnum->program_curriculum_id}}">{{$groupnum->groub_number}}</option>--}}
-                                        {{--@endforeach--}}
-                                    {{--</select>--}}
-
-
-                                 {{--</div>--}}
-                                {{--<span class="form-text text-muted"> Select the group number </span>--}}
-                            {{--</div>--}}
                         </div>
                      </div>
                     <div class="kt-portlet__foot">
@@ -70,6 +81,7 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <button type="submit" class="btn btn-primary" >Save</button>
+                                    <a  id="add_new" class="btn btn-warning" style="background: #374afb; border: unset; color: white;" >add new group</a>
 
 
                                 </div>

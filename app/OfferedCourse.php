@@ -36,7 +36,8 @@ class OfferedCourse extends Eloquent
 		'instructor_id' => 'int',
 		'day_id' => 'int',
 		'hour_id' => 'int',
-		'room_id' => 'int'
+		'room_id' => 'int',
+		'event_type' => 'int'
 	];
 
 	protected $fillable = [
@@ -45,7 +46,8 @@ class OfferedCourse extends Eloquent
 		'day_id',
 		'hour_id',
 		'room_id',
-        'even_type'
+		'group_id',
+        'event_type'
 	];
 
 	protected $appends = ['semester','department_id'];

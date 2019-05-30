@@ -7,30 +7,51 @@
  */
 
 namespace App\Http\Controllers;
+
 use App\OfferedCourse;
+use App\ProgramCurriculum;
 use Illuminate\Http\Request;
 
 class OfferedCourseController extends Controller
 {
     public function store(Request $request)
     {
-        $course= OfferedCourse::create(["program_curriculum_id"=>$request->program_curriculum_id,"instructor_id"=>$request->instructor_id]);
-        return view('offered_course.new');
+
+         $lab = ProgramCurriculum::find($request->program_curriculum_id)->lab_type;
+
+
+
+
+        foreach (range(1, count(request()->instructor_id)) as $key=>$group_id) {
+
+            foreach (range(1, 3) as $num) {
+                $event_type = 1;
+                if ($num == 3) {
+                    $event_type = $lab;
+                }
+            $course = OfferedCourse::create(["program_curriculum_id" => $request->program_curriculum_id, "instructor_id" => $request->instructor_id[$key], "group_id" => $group_id, "event_type" => $event_type]);
+
+            }
+
+        }
+
+
+        return redirect()->back();
     }
+
     public function destroy(OfferedCourse $offeredCourse)
     {
-        $offeredCourse->delete();
-        return redirect ()->back();
+
+         OfferedCourse::where('group_id',$offeredCourse->group_id)->where('program_curriculum_id',$offeredCourse->program_curriculum_id)->delete();
+        return redirect()->back();
 
     }
-   public function remove ($code){
 
-       foreach ( OfferedCourse::get()->where('program_curriculum_id',$code) as $offeredCourse)
-       {
+    public function remove( OfferedCourse $offeredCourse)
+    {
+         OfferedCourse::where('group_id',$offeredCourse->group_id)->where('program_curriculum_id',$offeredCourse->program_curriculum_id)->delete();
 
-           $this->destroy($offeredCourse);
-        }
-        return redirect ()->back();
+        return redirect()->back();
 
-   }
+    }
 }

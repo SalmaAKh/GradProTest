@@ -42,12 +42,12 @@ class User extends Authenticatable
 
     public function instructor()
     {
-        return $this->hasMany(\App\Instructor::class);
+        return $this->hasOne(\App\Instructor::class);
     }
 
     public function administrators()
     {
-        return $this->hasMany(\App\Administrator::class);
+        return $this->hasOne(\App\Administrator::class);
     }
 
     public function isAdministrator()
