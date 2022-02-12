@@ -25,7 +25,12 @@
 
     });
 </script>
+<script>
+    $('.remove').on('click',function () {
+        $(this).parent().remove();
 
+    })
+</script>
     @stop
 @section('content')
 
@@ -50,7 +55,7 @@
                             <div class="col-lg-12">
                                 <label>Courses Code</label>
                                 <select class="form-control" name="program_curriculum_id">
-                                    @foreach(App\ProgramCurriculum::all() as $code)
+                                    @foreach(App\ProgramCurriculum::where('department_id','<','4')->get() as $code)
                                         <option value="{{$code->id}}">{{$code->course_code}}</option>
                                     @endforeach
                                 </select>
@@ -59,9 +64,10 @@
                             </div>
 
                         </div>
-                        <div class="form-group row" id="base">
-                            <div class="col-lg-6 cloning " id="clonable" style="margin-top: 20px;">
+                        <div class="form-group row" id="base" style="position: relative;">
+                            <div class="col-lg-5 cloning " id="clonable" style="margin-top: 20px;margin-left: 20px;" >
                                 <label>Instructors:</label>
+                                <a href="javascript:;" onclick="$(this).closest('#clonable').remove();"> <i class="fa fa-trash" style="position: absolute; left: -10px; bottom: 33px; font-size: 16px;"></i></a>
                                 <div class="kt-input-icon">
 
                                     <select class="form-control" name="instructor_id[]">
@@ -81,7 +87,7 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <button type="submit" class="btn btn-primary" >Save</button>
-                                    <a  id="add_new" class="btn btn-warning" style="background: #374afb; border: unset; color: white;" >add new group</a>
+                                    <a  id="add_new" class="btn btn-warning" style="cursor: pointer;background: #374afb; border: unset; color: white;" >add new group</a>
 
 
                                 </div>
@@ -98,6 +104,20 @@
         </div>
     </div>
     </div>
+<style>
 
+
+    @media (min-width: 1024px)
+    {
+        #clonable:nth-child(even){
+            margin-left:160px!important
+        }
+
+    }
+
+    #clonable:first-child a {
+        display:none;
+    }
+</style>
 
 @stop

@@ -8,11 +8,11 @@ function reWriteWeekResult($day){
 }
 function reWriteColorResult($index){
 
-    return array("Blue", "Green", "Bronze", "Red", "Purple", "Black", "Brown", "grey", "Capri")[$index-1];
+    return array("Blue", "Green", "Bronze", "#fd397a", "Purple", "Black", "Brown", "grey", "Capri")[$index-1];
 }
 function reWriteTimeResult($time){
 
-    $arr = array("1"=>"08","2"=>"10","3"=>"12","4"=>"14","5"=>"16",);
+    $arr = array("1"=>"08","2"=>"10","3"=>"12","4"=>"14","5"=>"16","6"=>"18");
 
 
     return $arr[$time];
@@ -26,16 +26,18 @@ function reWriteTimeResult($time){
     <script src="./assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
 
 <script>
+    $( "#external" ).addClass( "kt-menu__item--here" );
 
-    $( "#time_constraint" ).addClass( "kt-menu__item--here" );
     var full_data =   [
-            @foreach(\App\OtherDepartmentConstraint::get() as $key=>$item)
+            @foreach(\App\OtherDepartmentOfferedCourse::get() as $key=>$item)
 
         {
             description: "{{$item->program_curriculum->course_code}}",
             title: "{{$item->program_curriculum->course_code}}",
             start: '2019-04-0{{reWriteWeekResult($item["day_id"])}}T{{reWriteTimeResult($item['hour_id'])}}:30:00+00:00',
             end: '2019-04-0{{reWriteWeekResult($item["day_id"])}}T{{reWriteTimeResult($item['hour_id']+1)}}:30:00+00:00',
+            course_id: {{$item["program_curriculum_id"]}} ,
+            is_new: false ,
 
         },
         @endforeach
@@ -91,8 +93,10 @@ function reWriteTimeResult($time){
                     newEvent.title = selected[1];
                     newEvent.start = moment(start).format();
                     newEvent.end = moment(end).format();
-                    newEvent.course_id = selected[1];
+                    newEvent.course_id = selected[0];
                     newEvent.allDay = false;
+                    newEvent.is_new = true;
+                    newEvent.description = "";
                     $('#kt_calendar').fullCalendar('renderEvent', newEvent);
 
 
@@ -163,7 +167,6 @@ function reWriteTimeResult($time){
 var selected ;
     $('#course').on('change',function () {
 
-
         selected = [this.value,$(this).find(':selected').data('name')];
         $('#main').fadeIn();
 
@@ -181,7 +184,7 @@ var selected ;
             return {
                 day_id: moment(e.start).day() ,
                 hour_id:   timeSlot.indexOf( moment(e.start).format('HH'))+1,
-                course_id: selected[0],
+                course_id: e.course_id,
 
                 //   department: e.department
             };

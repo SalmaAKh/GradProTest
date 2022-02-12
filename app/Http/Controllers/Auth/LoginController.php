@@ -36,4 +36,22 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+
+
+
+    protected function redirectTo()
+    {
+
+        if(auth()->user()->isInstructor())
+            return route("instructor.time_table");
+        else{
+            return route("dashboard");
+        }
+
+    }
+
+
+
+
 }

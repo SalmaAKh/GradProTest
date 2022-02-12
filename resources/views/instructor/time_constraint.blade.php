@@ -8,7 +8,7 @@ function reWriteWeekResult($day){
 }
 function reWriteColorResult($index){
 
-    return array("Blue", "Green", "Bronze", "Red", "Purple", "Black", "Brown", "grey", "Capri")[$index-1];
+    return array("Blue", "Green", "Bronze", "Red", "Purple", "Black", "#5da549", "grey", "Capri")[$index-1];
 }
 function reWriteTimeResult($time){
 
@@ -99,6 +99,11 @@ var full_data =   [
                 selectable : true,
                 select: function(start, end, jsEvent, view) {
 
+                    var d = $("#kt_calendar").fullCalendar("clientEvents");
+
+                    if(d.length>2){
+                        return false;
+                    }
                     start = moment(start).format();
                     end = moment(end).format();
                     $('#add_event').modal('toggle');

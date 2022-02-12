@@ -16,19 +16,20 @@ use phpDocumentor\Reflection\Types\Parent_;
 
 class Fitness_Function //extends Ginatic_Int
 {
-    private $Events, $name, $instructorId, $roomId, $Timeslot;
+    private $Events, $name, $instructorId, $roomId,$Courseid,$OtherDepartmentEnglishCourse,$OtherDepartmentTurkishCourse,$EventByTimeSlot3;
     private $collection;
     private $DiffLecture;
-    private $EventByTimeSlot;
-    private $EventByDay;
+    private $EventByTimeSlot,$EventByTimeSlot2;
+    private $EventByDay,$otherDepartmentFitness;
     public $checkedcount = 0;
-    /**
+    /**    public $otherDepartmentFitness;
+
      * @var array
      */
     private $labs = array();
 
 
-    public function Fitness($name, $Events, $instructorId, $rooms, $labs, $OfferedCourses)
+    public function Fitness($name, $Events, $instructorId, $rooms, $labs, $Courseid,$OtherDepartmentTurkishCourse,$OtherDepartmentEnglishCourse)
     {
         $this->checkedcount = 0;
         $this->Events = $Events; //List of events
@@ -36,7 +37,10 @@ class Fitness_Function //extends Ginatic_Int
         $this->name = $name; //Schedule ID
         $this->roomId = $rooms; //Room ID
         $this->labs = $labs;
-        $this->OfferedCourses= $OfferedCourses;
+        $this->Courseid= $Courseid;
+        $this->OtherDepartmentEnglishCourse=collect($OtherDepartmentEnglishCourse);
+        $this->OtherDepartmentTurkishCourse=collect($OtherDepartmentTurkishCourse);
+        $this->otherDepartmentFitness=0;
 
         $this->collection = collect($Events[$name]);
         for ($i = 0; $i < 25; $i++) //For each allowed timeslot
@@ -46,7 +50,21 @@ class Fitness_Function //extends Ginatic_Int
                 if ($value['Time_slot'] == $i)
                     return $value;
             });
+            $this->EventByTimeSlot2[$i] = $this->OtherDepartmentEnglishCourse->filter(function ($value, $key) use ($i) //Filter out Events by timeslot (grouping)
+            {
+                if ($value['Time_slot'] == $i)
+
+                    return $value;
+            });
+
+            $this->EventByTimeSlot3[$i] = $this->OtherDepartmentTurkishCourse->filter(function ($value, $key) use ($i) //Filter out Events by timeslot (grouping)
+            {
+                if ($value['Time_slot'] == $i)
+                    return $value;
+            });
+
         }
+
 
         for ($i = 0; $i < 5; $i++) //For each allowed timeslot
         {
@@ -58,14 +76,16 @@ class Fitness_Function //extends Ginatic_Int
         }
 
 
-        foreach ($this->EventByTimeSlot as $time => $event) {
+        //foreach ($this->EventByTimeSlot as $time => $event) {
 
-            if (sizeof($event) != 0) {
+        for($time=0;$time<25;$time++)
+        {
                 $this->InstructorConstraint($time);
                 $this->ClassRoomConstraint($time);
                 $this->SemesterConstraint($time);
-            }
         }
+
+
         foreach ($this->EventByDay as $day => $event) {
             if (sizeof($event) != 0) {
                 $this->InstructorConstraintByDay($event);
@@ -73,7 +93,10 @@ class Fitness_Function //extends Ginatic_Int
 
             }
         }
-        return $this->Events[$name];
+        $Data['Events']=$this->Events[$name];
+        $Data['OtherDepartmentFitness']=$this->otherDepartmentFitness;
+
+        return $Data;
     }
 
 
@@ -219,34 +242,65 @@ class Fitness_Function //extends Ginatic_Int
         $CheckSemestercmpe = null;
         $CheckSemestercmse = null;
         $CheckSemesterblgm = null;
+        $CheckSemesterOtherdep=null;
+        $CheckSemesterOtherdepT=null;
+        $CheckSemesterOtherdepcmse=null;
+
         for ($i = 1; $i <= 8; $i++) {
             $CheckSemestercmpe[$i - 1] = $this->EventByTimeSlot[$time]->filter(function ($value, $key) use ($i) {
-                if ($i == $value['Semester']&&$value['department_id']==1) {
+                if ($i == $value['Semester'] && $value['department_id'] == 1) {
                     return $value;
                 }
             });
 
-            if (sizeof($CheckSemestercmpe[$i - 1]) == 1) {
+            if ((sizeof($CheckSemestercmpe[$i - 1]) == 1)) {
                 foreach ($CheckSemestercmpe[$i - 1] as $check) {
                     $index = $check['My_Key'];
                     $this->Events[$this->name][$index]['Fitness'] += 1;
                 }
             }
+
+                $CheckSemesterOtherdep[$i - 1] = $this->EventByTimeSlot2[$time]->filter(function ($value, $key) use ($i) {
+                    if ($i == $value['semester']) {
+                        return $value;
+                    }
+                });
+
+                $this->otherDepartmentFitness += sizeof($CheckSemesterOtherdep[$i - 1]);
+
+//            if (sizeof($CheckSemesterOtherdep[$i - 1]) != 0 && sizeof($CheckSemestercmpe[$i - 1]) == 0) {
+//                $this->otherDepartmentFitness+=sizeof($CheckSemesterOtherdep[$i - 1]);
+//            }
+
         }
+
         for ($i = 1; $i <= 8; $i++) {
             $CheckSemestercmse[$i - 1] = $this->EventByTimeSlot[$time]->filter(function ($value, $key) use ($i) {
-                if ($i == $value['Semester']&&$value['department_id']==2) {
+                if ($i == $value['Semester'] && $value['department_id'] == 2) {
                     return $value;
                 }
             });
 
-            if (sizeof($CheckSemestercmse[$i - 1]) == 1) {
+            $CheckSemesterOtherdepcmse[$i - 1] = $this->EventByTimeSlot2[$time]->filter(function ($value, $key) use ($i) {
+                if ($i == $value['semester']) {
+                    return $value;
+                }
+            });
+
+
+            if ((sizeof($CheckSemestercmse[$i - 1]) == 1)) {
                 foreach ($CheckSemestercmse[$i - 1] as $check) {
                     $index = $check['My_Key'];
                     $this->Events[$this->name][$index]['Fitness'] += 1;
                 }
             }
+                $this->otherDepartmentFitness+=sizeof($CheckSemesterOtherdepcmse[$i - 1]);
+
+//            if (sizeof($CheckSemesterOtherdepcmse[$i - 1]) != 0 && sizeof($CheckSemestercmse[$i - 1]) == 0) {
+//                $this->otherDepartmentFitness+=sizeof($CheckSemesterOtherdepcmse[$i - 1]);
+//        }
         }
+
         for ($i = 1; $i <= 8; $i++) {
             $CheckSemesterblgm[$i - 1] = $this->EventByTimeSlot[$time]->filter(function ($value, $key) use ($i) {
                 if ($i == $value['Semester']&&$value['department_id']==3) {
@@ -254,15 +308,28 @@ class Fitness_Function //extends Ginatic_Int
                 }
             });
 
-            if (sizeof( $CheckSemesterblgm[$i - 1]) == 3) {
+            if ((sizeof($CheckSemesterblgm[$i - 1]) == 1)) {
                 foreach ($CheckSemesterblgm[$i - 1] as $check) {
                     $index = $check['My_Key'];
                     $this->Events[$this->name][$index]['Fitness'] += 1;
                 }
             }
 
-        }
 
+            $CheckSemesterOtherdepT[$i - 1] = $this->EventByTimeSlot3[$time]->filter(function ($value, $key) use ($i) {
+                if ($i == $value['semester']) {
+                    return $value;
+                }
+            });
+
+
+
+                $this->otherDepartmentFitness+=sizeof($CheckSemesterOtherdepT[$i - 1]);
+
+//            if (sizeof($CheckSemesterOtherdepT[$i - 1]) != 0 && sizeof($CheckSemesterblgm[$i - 1]) == 0) {
+//                $this->otherDepartmentFitness+=sizeof($CheckSemesterOtherdepT[$i - 1]);
+//            }
+        }
     }
 
     private function InstructorConstraintByDay($event)
@@ -293,32 +360,30 @@ class Fitness_Function //extends Ginatic_Int
         $CourseList = null;
         $CourseListByGroup = null;
 
-        foreach ($this->OfferedCourses as $key => $course) {
-            $searchID = $course['program_curriculum_id'];
+        foreach ($this->Courseid as $key => $course) {
+            $searchID = $course["id"];
             $CourseList[$key] = $event->filter(function ($value, $key) use ($searchID) {
-                if ($searchID == $value['Course_id'])
+                if ($searchID == $value['Course_id']&& $value['Event_Type'] == 1)
                     return $value;
             });
 
-            for ($i = 0; $i <= 3; $i++) {
-                $searchID = $i;
-                $CourseListByGroup[$key] = $CourseList[$key]->filter(function ($value, $key) use ($searchID) {
-                    if ($searchID == $value['group_id'])
-                        return $value;
-                });
-            }
-
-
-            if (sizeof($CourseListByGroup[$key]) == 1) // if only one instructor event per time slot
+//            for ($i = 0; $i <= 3; $i++) {
+//                $searchID = $i;
+//                $CourseListByGroup[$key] = $CourseList[$key]->filter(function ($value, $key) use ($searchID) {
+//                    if ($searchID == $value['group_id'])
+//                        return $value;
+//                });
+//            }
+            if (sizeof( $CourseList[$key]) == 1) // if only one instructor event per time slot
             {
-                foreach ($CourseListByGroup[$key] as $check) { // due to nature of data even if the result is one a foreach is required
+                foreach ($CourseList[$key] as $check) { // due to nature of data even if the result is one a foreach is required
                     $index = $check['My_Key'];              // in order to bypass the array indexing of the filter
                     $this->Events[$this->name][$index]['Fitness'] += 1;
+
                 }
             }
         }
     }
-
 
 }
 

@@ -8,7 +8,7 @@ function reWriteWeekResult($day){
 }
 function reWriteColorResult($index){
 
-    return array("Blue", "Green", "Bronze", "Red", "Purple", "Black", "Brown", "grey", "Capri")[$index-1];
+    return array("Blue", "Green", "Bronze", "#fd397a", "Purple", "Black", "#5da549", "grey", "Capri")[$index-1];
 }
 function reWriteTimeResult($time){
 

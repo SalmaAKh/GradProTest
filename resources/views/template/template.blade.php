@@ -41,12 +41,6 @@ License: You must have a valid license purchased only from themeforest(the above
         });
     </script>
 
-    <!--end::Fonts -->
-
-    <!--begin::Page Vendors Styles(used by this page) -->
-    <link href="./assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
-
-    <!--end::Page Vendors Styles -->
 
     <!--begin:: Global Mandatory Vendors -->
     <link href="./assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
@@ -84,6 +78,19 @@ License: You must have a valid license purchased only from themeforest(the above
 
     <!--begin::Global Theme Styles(used by all pages) -->
     <link href="./assets/css/demo2/style.bundle.css" rel="stylesheet" type="text/css" />
+    <style>
+        @media (max-width: 1000px){
+
+
+            .kt-header__brand-logo-default{
+                display: none;
+            }
+        }
+
+        .fc-left{
+            display: none!important;
+        }
+    </style>
 @yield('style')
 
     <!--end::Global Theme Styles -->
@@ -611,21 +618,25 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     </ul>
                                         </div>
                                     </li>
-                                    <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Timetable</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                    <li id="timetable" class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Timetable</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                         <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
                                             <ul class="kt-menu__subnav">
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="javascript:;" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Generate New Timetable</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">View Timetable</span></a></li>
+                                                <li class="kt-menu__item " aria-haspopup="true"><a href="{{route('time_table.generate_view')}}" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Generate New Timetable</span></a></li>
+                                                <li class="kt-menu__item " aria-haspopup="true"><a  href="{{route('timetable.view')}}" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">View Timetable</span></a></li>
+                                                <li class="kt-menu__item " aria-haspopup="true"><a  href="{{route('time_table.Filtering')}}" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Timetable Filtering </span></a></li>
 
                                                     </ul>
                                         </div>
+                                    </li>
+                                    <li  id="external" class="kt-menu__item  kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="{{route('course.time_constraint')}}" class="kt-menu__link "><span class="kt-menu__link-text">Other Department courses</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+
                                     </li>
                                                 @endAdmin()
                                     @Instructor()
                                     <li id="time_constraint" class="kt-menu__item  kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="{{route('instructor.time_constraint')}}" class="kt-menu__link "><span class="kt-menu__link-text">Time Constraint</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
 
                                     </li>
-                                    <li class="kt-menu__item  kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="{{route('instructor.time_constraint')}}" class="kt-menu__link "><span class="kt-menu__link-text">Timetable</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                    <li id="instructor" class="kt-menu__item  kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="{{route('instructor.time_table')}}" class="kt-menu__link "><span class="kt-menu__link-text">Instructor Timetable</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
 
                                     </li>
                                     @endInstructor

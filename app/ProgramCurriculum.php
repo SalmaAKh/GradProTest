@@ -55,4 +55,11 @@ class ProgramCurriculum extends Eloquent
 	{
 		return $this->hasMany(\App\OfferedCourse::class);
 	}
+	public function OtherDepartmentOfferedCourse()
+	{
+		return $this->hasMany(\App\OtherDepartmentOfferedCourse::class);
+	}
+
+
+
 }

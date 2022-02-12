@@ -31,14 +31,14 @@ class OtherDepartmentConstraint extends Eloquent
 
 
 	protected $fillable = [
-		'course_id',
+		'program_curriculum_id',
 		'hour_id',
 		'day_id'
 	];
         public $timestamps = false;
 	public function program_curriculum()
 	{
-		return $this->belongsTo(\App\ProgramCurriculum::class,'course_id');
+		return $this->belongsTo(\App\ProgramCurriculum::class,'program_curriculum_id');
 	}
 
 	public function hour()

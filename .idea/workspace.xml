@@ -1,933 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cfac00a4-be36-4f30-8c69-94e0c7fafeaf" name="Default Changelist" comment="Fitness Function">
-      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/GradProTest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckForMaintenanceMode.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/artisan" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap/cache/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/broadcasting.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/cache.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/hashing.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/logging.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/models.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/queue.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/view.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_03_27_163938_create_administrators_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_03_27_163938_create_constrain_hours_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_03_27_163938_create_days_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_03_27_163938_create_departments_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_03_27_163938_create_hours_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_03_27_163938_create_instructors_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_03_27_163938_create_offered_courses_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_03_27_163938_create_program_curriculum_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_03_27_163938_create_rooms_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_03_27_163938_create_users_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_03_27_163941_add_foreign_keys_to_administrators_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_03_27_163941_add_foreign_keys_to_constrain_hours_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_03_27_163941_add_foreign_keys_to_instructors_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_03_27_163941_add_foreign_keys_to_offered_courses_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_03_27_163941_add_foreign_keys_to_program_curriculum_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/pagination.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/passwords.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/instructor/Constrains.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/console.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/public/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/cache/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/testing/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/views/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/logs/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/CreatesApplication.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/.idea/novaGrad.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Administrator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Console/Kernel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/ConstrainHour.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Day.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Department.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Exceptions/Handler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Hour.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Http/Controllers/Auth/ForgotPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Http/Kernel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Http/Middleware/CheckForMaintenanceMode.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Http/Middleware/EncryptCookies.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Http/Middleware/TrimStrings.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Http/Middleware/TrustProxies.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Instructor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Nova/Department.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Nova/Instructor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Nova/ProgramCurriculum.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Nova/Resource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Nova/Room.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Nova/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/OfferedCourse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/ProgramCurriculum.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Providers/NovaServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/Room.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/app/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/artisan" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/bootstrap/app.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/bootstrap/cache/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/composer.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/config/app.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/config/auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/config/broadcasting.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/config/cache.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/config/database.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/config/filesystems.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/config/hashing.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/config/logging.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/config/mail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/config/models.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/config/nova.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/config/queue.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/config/services.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/config/session.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/config/view.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/factories/AdministratorFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/factories/ConstrainTimeFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/factories/DepartmentFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/factories/InstructorFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/factories/ModelFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/factories/OfferedCourseFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/factories/ProgramCurriculumFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/factories/RoomFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/factories/UserFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/migrations/2019_03_27_163938_create_administrators_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/migrations/2019_03_27_163938_create_constrain_hours_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/migrations/2019_03_27_163938_create_days_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/migrations/2019_03_27_163938_create_departments_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/migrations/2019_03_27_163938_create_hours_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/migrations/2019_03_27_163938_create_instructors_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/migrations/2019_03_27_163938_create_offered_courses_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/migrations/2019_03_27_163938_create_program_curriculum_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/migrations/2019_03_27_163938_create_rooms_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/migrations/2019_03_27_163938_create_users_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/migrations/2019_03_27_163941_add_foreign_keys_to_administrators_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/migrations/2019_03_27_163941_add_foreign_keys_to_constrain_hours_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/migrations/2019_03_27_163941_add_foreign_keys_to_instructors_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/migrations/2019_03_27_163941_add_foreign_keys_to_offered_courses_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/migrations/2019_03_27_163941_add_foreign_keys_to_program_curriculum_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/.eslintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/config/nova.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/database/migrations/2018_01_01_000000_create_action_events_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/mix-manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/phpunit.xml.dist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/public/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/public/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/public/manifest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/public/mix-manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/public/vendor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/css/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/Nova.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/__tests__/ActionSelector.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/__tests__/__snapshots__/ActionSelector.spec.js.snap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/__tests__/fields/BelongsToField.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/__tests__/fields/MorphToField.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/__tests__/views/ResourceIndex.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/__tests__/views/UpdateAttached.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/__tests__/views/__snapshots__/ResourceIndex.spec.js.snap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/__tests__/views/__snapshots__/UpdateAttached.spec.js.snap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/base.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/ActionSelector.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/BooleanOption.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Card.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/CardWrapper.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Cards.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Cards/HelpCard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/CheckboxWithLabel.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Controls/SelectControl.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/CreateResourceButton.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/CustomDetailHeader.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/CustomDetailToolbar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/CustomIndexHeader.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/CustomIndexToolbar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/DateTimePicker.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/DeleteButton.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/DeleteMenu.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Detail/BelongsToField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Detail/BelongsToManyField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Detail/BooleanField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Detail/CodeField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Detail/DateField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Detail/DateTimeField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Detail/FileField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Detail/HasManyField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Detail/HasOneField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Detail/HeadingField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Detail/MarkdownField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Detail/MorphToActionTargetField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Detail/MorphToField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Detail/MorphToManyField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Detail/Panel.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Detail/PasswordField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Detail/RelationshipPanel.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Detail/StatusField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Detail/TextField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Detail/TextareaField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Detail/TrixField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Dropdown.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/DropdownMenu.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/DropdownTrigger.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Excerpt.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/FilterMenu.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Filters/BooleanFilter.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Filters/DateFilter.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Filters/SelectFilter.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Form/BelongsToField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Form/BooleanField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Form/CodeField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Form/DateField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Form/DateTimeField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Form/DefaultField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Form/FieldWrapper.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Form/FileField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Form/HeadingField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Form/HelpText.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Form/Label.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Form/MarkdownField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Form/MorphToField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Form/PasswordField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Form/PlaceField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Form/SelectField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Form/StatusField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Form/TextField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Form/TextareaField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Form/TrixField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/GlobalSearch.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Heading.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Icons/Delete.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Icons/Download.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Icons/Edit.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Icons/Editor/Bold.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Icons/Editor/FullScreen.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Icons/Editor/Image.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Icons/Editor/Italic.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Icons/Editor/Link.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Icons/Filter.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Icons/ForceDelete.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Icons/Icon.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Icons/Loader.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Icons/Play.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Icons/Refresh.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Icons/Restore.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Icons/Search.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Icons/View.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/ImageLoader.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Index/BelongsToField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Index/BooleanField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Index/Checkbox.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Index/DateField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Index/DateTimeField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Index/FakeCheckbox.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Index/FileField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Index/HeadingField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Index/MorphToActionTargetField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Index/MorphToField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Index/PasswordField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Index/ResourceTableRow.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Index/SortableIcon.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Index/StatusField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Index/TextField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/LensSelector.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Loading.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/LoadingCard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/LoadingView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Metrics/Base/PartitionMetric.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Metrics/Base/TrendMetric.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Metrics/Base/ValueMetric.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Metrics/PartitionMetric.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Metrics/TrendMetric.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Metrics/ValueMetric.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Modal.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Modals/ConfirmActionModal.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Modals/ConfirmUploadRemovalModal.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Modals/DeleteResourceModal.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Modals/RestoreResourceModal.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Pagination/PaginationLinks.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Pagination/PaginationSimple.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/PanelItem.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/ProgressButton.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/ResourceTable.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/ScrollWrap.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/SearchInput.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/Trix.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/components/ValidationErrors.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/fields.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/plugins/axios.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/plugins/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/plugins/lodash.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/plugins/moment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/polyfills/composedPath.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/router/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/router/routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/storage/BelongsToFieldStorage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/storage/MorphToFieldStorage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/storage/__mocks__/BelongsToFieldStorage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/storage/__mocks__/MorphToFieldStorage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/store/resources.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/test-setup/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/util/axios.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/util/empty.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/views/403.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/views/404.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/views/Attach.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/views/Create.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/views/Dashboard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/views/Detail.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/views/Error403.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/views/Error404.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/views/Index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/views/Lens.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/views/Update.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/js/views/UpdateAttached.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/lang/en.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/lang/en/validation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/views/auth/layout.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/views/auth/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/views/auth/partials/errors.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/views/auth/partials/header.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/views/auth/partials/heading.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/views/auth/partials/logo.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/views/auth/passwords/email.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/views/dashboard.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/views/dashboard/navigation.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/views/layout.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/views/partials/footer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/views/partials/logo.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/views/partials/user.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/views/resources/navigation.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/resources/views/router.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/routes/api.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Actions/Action.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Actions/ActionEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Actions/ActionMethod.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Actions/ActionModelCollection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Actions/ActionResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Actions/Actionable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Actions/CallQueuedAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Actions/CallsQueuedActions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Actions/DestructiveAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Actions/DispatchAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Actions/Transaction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Authorizable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/AuthorizedToSee.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/AuthorizesRequests.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Card.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Cards/Help.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/ActionCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/AssetCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/BaseResourceCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/CardCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/Concerns/AcceptsNameAndVendor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/CustomFilterCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/FieldCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/FilterCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/InstallCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/LensCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/PartitionCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/PublishCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/RenamesStubs.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/ResourceCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/ResourceToolCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/ThemeCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/ToolCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/TrendCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/UserCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/ValueCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/asset-stubs/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/asset-stubs/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/asset-stubs/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/asset-stubs/resources/js/asset.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/asset-stubs/resources/sass/asset.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/asset-stubs/src/AssetServiceProvider.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/asset-stubs/webpack.mix.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/card-stubs/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/card-stubs/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/card-stubs/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/card-stubs/resources/js/card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/card-stubs/resources/js/components/Card.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/card-stubs/resources/sass/card.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/card-stubs/routes/api.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/card-stubs/src/Card.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/card-stubs/src/CardServiceProvider.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/card-stubs/webpack.mix.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/field-stubs/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/field-stubs/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/field-stubs/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/field-stubs/resources/js/components/DetailField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/field-stubs/resources/js/components/FormField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/field-stubs/resources/js/components/IndexField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/field-stubs/resources/js/field.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/field-stubs/resources/sass/field.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/field-stubs/src/Field.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/field-stubs/src/FieldServiceProvider.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/field-stubs/webpack.mix.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/filter-stubs/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/filter-stubs/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/filter-stubs/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/filter-stubs/resources/js/components/Filter.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/filter-stubs/resources/js/filter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/filter-stubs/resources/sass/filter.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/filter-stubs/src/Filter.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/filter-stubs/src/FilterServiceProvider.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/filter-stubs/webpack.mix.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/resource-tool-stubs/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/resource-tool-stubs/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/resource-tool-stubs/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/resource-tool-stubs/resources/js/components/Tool.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/resource-tool-stubs/resources/js/tool.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/resource-tool-stubs/resources/sass/tool.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/resource-tool-stubs/routes/api.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/resource-tool-stubs/src/Tool.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/resource-tool-stubs/src/ToolServiceProvider.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/resource-tool-stubs/webpack.mix.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/stubs/NovaServiceProvider.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/stubs/action.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/stubs/base-resource.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/stubs/boolean-filter.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/stubs/date-filter.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/stubs/destructive-action.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/stubs/filter.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/stubs/lens.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/stubs/partition.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/stubs/resource.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/stubs/trend.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/stubs/user-resource.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/stubs/value.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/theme-stubs/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/theme-stubs/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/theme-stubs/resources/css/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/theme-stubs/src/ThemeServiceProvider.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/tool-stubs/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/tool-stubs/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/tool-stubs/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/tool-stubs/resources/js/components/Tool.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/tool-stubs/resources/js/tool.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/tool-stubs/resources/sass/tool.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/tool-stubs/resources/views/navigation.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/tool-stubs/routes/api.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/tool-stubs/src/Http/Middleware/Authorize.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/tool-stubs/src/Tool.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/tool-stubs/src/ToolServiceProvider.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Console/tool-stubs/webpack.mix.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Contracts/Cover.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Contracts/Deletable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Contracts/Filter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Contracts/ListableField.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Contracts/Resolvable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/DeleteField.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Element.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Events/NovaServiceProviderRegistered.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Events/ServingNova.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Exceptions/AuthenticationException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Exceptions/LensCountException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Exceptions/MissingActionHandlerException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Exceptions/NovaExceptionHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/ActionFields.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/Avatar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/BelongsTo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/BelongsToMany.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/Boolean.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/Code.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/Country.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/Currency.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/Date.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/DateTime.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/Deletable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/DetachesPivotModels.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/Expandable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/Field.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/FieldCollection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/FieldElement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/File.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/FormatsRelatableDisplayValues.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/Gravatar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/HasMany.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/HasOne.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/Heading.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/ID.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/Image.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/Markdown.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/MorphMany.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/MorphOne.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/MorphTo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/MorphToActionTarget.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/MorphToMany.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/MorphedByMany.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/Number.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/Password.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/PasswordConfirmation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/Place.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/ResolvedFields.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/ResolvesReverseRelation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/ResourceRelationshipGuesser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/Select.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/Status.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/Text.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/Textarea.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/Timezone.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Fields/Trix.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/FillsFields.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Filters/BooleanFilter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Filters/DateFilter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Filters/Filter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/GlobalSearch.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/ActionController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/AssociatableController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/AttachableController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/AttachedResourceUpdateController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/CardController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/CreationFieldController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/CreationPivotFieldController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/DashboardCardController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/DashboardMetricController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/DeletesFields.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/DetailMetricController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/FieldController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/FieldDestroyController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/FieldDownloadController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/FilterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/ForgotPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/LensActionController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/LensCardController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/LensController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/LensFilterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/LensMetricController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/LensResourceCountController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/LensResourceDestroyController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/LensResourceForceDeleteController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/LensResourceRestoreController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/LoginController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/MetricController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/MorphableController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/MorphedResourceAttachController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/PivotFieldDestroyController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/RelatableAuthorizationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/ResetPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/ResourceAttachController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/ResourceCountController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/ResourceDestroyController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/ResourceDetachController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/ResourceForceDeleteController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/ResourceIndexController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/ResourceRestoreController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/ResourceShowController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/ResourceStoreController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/ResourceUpdateController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/RouterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/ScriptController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/SearchController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/SoftDeleteStatusController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/StyleController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/TrixAttachmentController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/UpdateFieldController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Controllers/UpdatePivotFieldController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Middleware/Authorize.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Middleware/BootTools.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Middleware/DispatchServingNovaEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Middleware/ServeNova.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/ActionRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/CardRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/CountsResources.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/CreateResourceRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/DashboardCardRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/DashboardMetricRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/DecodesFilters.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/DeleteLensResourceRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/DeleteResourceRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/DeletionRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/DetachResourceRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/ForceDeleteLensResourceRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/ForceDeleteResourceRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/InteractsWithLenses.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/InteractsWithRelatedResources.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/InteractsWithResources.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/LensActionRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/LensCardRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/LensCountRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/LensMetricRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/LensRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/LensResourceDeletionRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/MetricRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/NovaRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/PivotFieldDestroyRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/QueriesResources.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/ResourceDetailRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/ResourceIndexRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/RestoreLensResourceRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/RestoreResourceRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Http/Requests/UpdateResourceRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Lenses/Lens.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Macros/FirstDayOfPreviousQuarter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Macros/FirstDayOfQuarter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/MemoizesMethods.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Metable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Metrics/Metric.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Metrics/MySqlTrendDateExpression.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Metrics/Partition.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Metrics/PartitionResult.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Metrics/PostgresTrendDateExpression.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Metrics/RangedMetric.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Metrics/SqliteTrendDateExpression.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Metrics/Trend.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Metrics/TrendDateExpression.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Metrics/TrendDateExpressionFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Metrics/TrendResult.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Metrics/Value.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Metrics/ValueResult.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Nova.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/NovaApplicationServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/NovaCoreServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/NovaServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Panel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/PendingRouteRegistration.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/PerformsQueries.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/PerformsValidation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/ProxiesCanSeeToGate.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Query/ApplyFilter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Query/ApplySoftDeleteConstraint.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/ResolvesActions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/ResolvesCards.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/ResolvesFields.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/ResolvesFilters.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/ResolvesLenses.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Resource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/ResourceTool.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/ResourceToolElement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Rules/NotAttached.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Rules/Relatable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Rules/RelatableAttachment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Tool.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Tools/Dashboard.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Tools/ResourceManager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/TrashedStatus.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Trix/Attachment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Trix/DeleteAttachments.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Trix/DetachAttachment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Trix/DiscardPendingAttachments.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Trix/PendingAttachment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Trix/PruneStaleAttachments.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/src/Trix/StorePendingAttachment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tailwind.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/ActionControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/AssetServeTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/AssociatableControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/AttachableControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/AuthenticationTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/BooleanResourceTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/CreationControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/FieldControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/FileFieldControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/FilterControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/LensActionControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/LensControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/LensMetricControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/LensResourceCountTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/LensResourceDestroyTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/LensResourceForceDeleteTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/LensResourceRestoreTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/MetricControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/MorphableControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/MorphableResourceAttachmentTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/MorphableResourceAttachmentUpdateTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/MorphableResourceCreationTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/MorphableResourceUpdateTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/MySqlTrendMetricControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/PartitionMetricControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/PivotActionControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/PostgresTrendMetricControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/ResourceAttachmentTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/ResourceAttachmentUpdateTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/ResourceCountTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/ResourceCreationTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/ResourceDestroyTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/ResourceDetachTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/ResourceFilledCallbackTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/ResourceForceDeleteTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/ResourceIndexTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/ResourceRestoreTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/ResourceShowTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/ResourceUpdateTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/SearchControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/SoftDeleteStatusControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/SqliteTrendMetricControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Controller/TrendDateTests.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Factories/AddressFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Factories/CommentFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Factories/PostFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Factories/RoleFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Factories/TagFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Factories/UserFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Feature/ActionTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Feature/AuthorizationTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Feature/FieldTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Feature/FilterTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Feature/MetricTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Feature/NullableTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Feature/PartitionTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Feature/RelationsTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Feature/ResourceAuthorizationTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Feature/ResourceFieldTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Feature/ResourceRelationshipGuesserTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Feature/SelectTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Feature/ToolTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/AdditionalOptionsFilter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/Address.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/AddressResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/Boolean.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/BooleanResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/ColumnFilter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/Comment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/CommentPolicy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/CommentResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/CreateDateFilter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/CustomKey.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/CustomKeyFilter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/CustomKeyResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/CustomerRevenue.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/DestructiveAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/EmptyAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/ExceptionAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/FailingAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/FailingPivotAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/File.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/FileResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/ForbiddenUserResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/GitHubAvatar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/GroupedUserResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/GroupingUserLens.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/HandleResultAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/IdFilter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/MyResourceTool.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/NoopAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/NoopActionWithPivotHandle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/NoopActionWithoutActionable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/OpensInNewTabAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/PaginatingUserLens.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/PanelResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/Post.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/PostAverageTrend.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/PostCountTrend.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/PostMaxTrend.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/PostMinTrend.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/PostPolicy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/PostResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/PostSumTrend.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/PostWithCustomCreatedAt.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/PostWordCount.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/PostsByUserPartition.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/ProvidesActionFields.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/QueuedAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/QueuedResourceAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/QueuedUpdateStatusAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/RedirectAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/RelationshipGuesserResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/RequiredFieldAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/Role.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/RoleAssignment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/RolePolicy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/RoleResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/SoftDeletingFile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/SoftDeletingFileResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/Tag.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/TagPolicy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/TagResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/TotalUsers.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/UnauthorizedAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/UnrunnableAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/UpdateStatusAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/UserGrowth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/UserLens.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/UserPolicy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/UserResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/WordCountByUserPartition.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/assets/tool.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Fixtures/assets/tool.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/IntegrationTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Migrations/2017_10_10_000000_create_users_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Migrations/2017_10_10_000001_create_posts_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Migrations/2017_10_10_000002_create_roles_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Migrations/2017_10_10_000003_create_comments_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Migrations/2017_10_10_000004_create_tags_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Migrations/2017_10_10_000005_create_password_resets_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Migrations/2017_10_10_000006_create_action_events_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Migrations/2017_10_10_000007_create_addresses_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Migrations/2017_10_10_000008_create_files_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Migrations/2017_10_10_000009_create_soft_deleting_files_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Migrations/2017_10_10_000010_create_booleans_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Migrations/2017_10_10_000011_create_custom_keys_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/Migrations/2017_10_10_000011_create_posts_authors_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/MySqlIntegrationTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/PostgresIntegrationTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/tests/TestServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/webpack.mix.js.dist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/nova/yarn.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/phpunit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/public/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/public/css/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/public/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/public/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/public/vendor/nova/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/public/vendor/nova/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/public/vendor/nova/manifest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/public/vendor/nova/mix-manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/public/vendor/nova/vendor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/resources/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/resources/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/resources/js/components/ExampleComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/resources/lang/en/auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/resources/lang/en/pagination.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/resources/lang/en/passwords.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/resources/lang/en/validation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/resources/lang/vendor/nova/en.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/resources/lang/vendor/nova/en/validation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/resources/sass/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/resources/sass/app.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/resources/views/vendor/nova/partials/footer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/resources/views/vendor/nova/partials/logo.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/resources/views/vendor/nova/partials/user.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/resources/views/welcome.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/routes/api.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/routes/channels.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/routes/console.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/routes/web.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/server.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/storage/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/storage/app/public/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/storage/framework/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/storage/framework/cache/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/storage/framework/cache/data/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/storage/framework/sessions/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/storage/framework/testing/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/storage/framework/views/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/storage/logs/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/tests/CreatesApplication.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/tests/Feature/ExampleTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/tests/TestCase.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/tests/Unit/ExampleTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/webpack.mix.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../novaGrad/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/Laravel_2_12_22__3_54_PM.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/TimetableController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/general/dropzone/.idea/github-dropzone.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/time_table/Filtering.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/time_table/Generate.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/time_table/store.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/GradProTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GradProTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Department.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Department.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseConstraintController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseConstraintController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/CrossOver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/CrossOver.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/Fitness_Function.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/Fitness_Function.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/Ginatic_Int.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/Ginatic_Int.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/OfferedCourse.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/OfferedCourse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/OtherDepartmentConstraint.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/OtherDepartmentConstraint.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/ProgramCurriculum.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ProgramCurriculum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/external_constraint/external_constraint.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/external_constraint/external_constraint.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/instructor/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/instructor/table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/instructor/time_constraint.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/instructor/time_constraint.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/offered_course/new.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/offered_course/new.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/template/template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/template/template.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/time_table/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/time_table/view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -935,6 +40,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/GradProTest$phpunit_xml.xml" NAME="phpunit.xml Coverage Results" MODIFIED="1556206202143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
@@ -953,48 +59,44 @@
     <expand />
     <select />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/Ginatic_Int.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-              <folding>
-                <element signature="e#59#72#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/Fitness_Function.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="157" column="32" selection-start-line="157" selection-start-column="32" selection-end-line="157" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>index1</find>
-      <find>$name</find>
-      <find>Events[$name]</find>
-      <find>$i</find>
-      <find>reWriteTimeResult</find>
-      <find>Fitness</find>
-      <find>$appends</find>
-      <find>getSemesterAttribute</find>
-      <find>program_curriculum()</find>
-      <find>department()</find>
-      <find>department_id</find>
+      <find>other department courses</find>
+      <find>instructor timetabe</find>
+      <find>data</find>
+      <find>where</find>
+      <find>instructor</find>
+      <find>Data</find>
+      <find>child</find>
+      <find>OutputFit</find>
+      <find>otherDepartmentFitness</find>
+      <find>selection</find>
+      <find>[0]</find>
+      <find>user</find>
+      <find>group_id</find>
+      <find>fc-title</find>
+      <find>style</find>
+      <find>code</find>
+      <find>CHANGE</find>
+      <find>brown</find>
+      <find>background</find>
+      <find>fc-left</find>
+      <find>time_table</find>
+      <find>0.5</find>
+      <find>render</find>
+      <find>addClass</find>
+      <find>base</find>
+      <find>add</find>
+      <find>Timeta</find>
+      <find>&quot;Red&quot;</find>
+      <find>displa</find>
+      <find>back</find>
     </findStrings>
     <replaceStrings>
       <replace>$i</replace>
       <replace>$key</replace>
+      <replace>#5da549</replace>
+      <replace>&quot;#fd397a&quot;</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -1005,15 +107,17 @@
       </map>
     </option>
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_03_27_163938_create_users_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_03_27_163938_create_rooms_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_03_27_163938_create_instructors_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_03_27_163938_create_hours_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_03_27_163938_create_departments_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_03_27_163938_create_days_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_03_27_163938_create_constrain_hours_table.php" />
@@ -1031,22 +135,44 @@
         <option value="$PROJECT_DIR$/database/factories/ProgramCurriculumFactory.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_03_27_163938_create_offered_courses_table.php" />
         <option value="$PROJECT_DIR$/.env.example" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/SelectionMethod.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/CrossOver.php" />
-        <option value="$PROJECT_DIR$/resources/views/instructor/table.blade.php" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/app/ProgramCurriculum.php" />
         <option value="$PROJECT_DIR$/app/Department.php" />
         <option value="$PROJECT_DIR$/resources/views/instructor/Constrains.blade.php" />
         <option value="$PROJECT_DIR$/routes/api.php" />
         <option value="$PROJECT_DIR$/app/OfferedCourse.php" />
+        <option value="$PROJECT_DIR$/config/database.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/OfferedCourseController.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/storage/framework/views/9928156996426bbb584a3aaaf86f635e69f70b92.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/InstructorConstraintController.php" />
+        <option value="$PROJECT_DIR$/resources/views/time_table/Generate_ new_ timetabl.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/time_table/Filtering_timetable.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/TimetableController.php" />
+        <option value="$PROJECT_DIR$/config/debugbar.php" />
+        <option value="$PROJECT_DIR$/app/ProgramCurriculum.php" />
+        <option value="$PROJECT_DIR$/app/OtherDepartmentConstraint.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/CourseConstraintController.php" />
+        <option value="$PROJECT_DIR$/resources/views/instructor/time_constraint.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/resources/views/offered_course/browser.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/time_table/Generate.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/time_table/store.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/external_constraint/external_constraint.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/instructor/table.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/offered_course/new.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/Fitness_Function.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/SelectionMethod.php" />
+        <option value="$PROJECT_DIR$/resources/views/template/template.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/time_table/view.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/time_table/Filtering.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/Ginatic_Int.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/CrossOver.php" />
       </list>
     </option>
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="127.0.0.1" id="8b2a73df-2f24-4d14-814b-9f95f0e9d6ac" name="127.0.0.1" port="8000" />
@@ -1101,23 +227,18 @@
       <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
       <path value="$PROJECT_DIR$/vendor/symfony/routing" />
       <path value="$PROJECT_DIR$/vendor/symfony/finder" />
-      <path value="$PROJECT_DIR$/vendor/symfony/contracts" />
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
       <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
       <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
       <path value="$PROJECT_DIR$/vendor/symfony/debug" />
       <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
-      <path value="$PROJECT_DIR$/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/vendor/league/flysystem" />
       <path value="$PROJECT_DIR$/vendor/symfony/console" />
       <path value="$PROJECT_DIR$/vendor/phar-io/version" />
-      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-color" />
       <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
-      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter" />
       <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
       <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
@@ -1144,21 +265,37 @@
       <path value="$PROJECT_DIR$/vendor/xethron/migrations-generator" />
       <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/vendor/php-parallel-lint/php-console-color" />
+      <path value="$PROJECT_DIR$/vendor/php-parallel-lint/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="775" />
-    <option name="y" value="50" />
-    <option name="width" value="1050" />
-    <option name="height" value="1040" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
+  <component name="ProjectId" id="250pqawne3lXnXvREwui95An0a2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1196,39 +333,42 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Moaz\PhpstormProjects\GradProTest\app\Http\Controllers\Genatic_Algotrthm" />
-      <recent name="C:\Users\Moaz\PhpstormProjects\GradProTest\resources\views" />
+      <recent name="C:\Users\noor2\Desktop\last submition\GradProTest\resources\views\time_table" />
+      <recent name="C:\Users\noor2\Desktop\last submition\GradProTest\app\Http\Controllers" />
+      <recent name="C:\Users\noor2\Desktop\last submition\GradProTest\app" />
+      <recent name="C:\Users\noor2\Desktop\last submition\GradProTest\resources\views\instructor" />
+      <recent name="C:\Users\noor2\Desktop\last submition\GradProTest\resources\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\noor2\Desktop\last submition\GradProTest\resources\views\external_constraint" />
       <recent name="C:\Users\salma khater\Desktop\GradProTest\app\Http\Controllers\Genatic-Algotrthm" />
       <recent name="C:\Users\salma khater\Desktop\GradProTest\app\Http\Controllers" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -1236,6 +376,7 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -1302,6 +443,16 @@
       <workItem from="1558993377189" duration="798000" />
       <workItem from="1558996444342" duration="6528000" />
       <workItem from="1559041803073" duration="3620000" />
+      <workItem from="1559069707957" duration="49187000" />
+      <workItem from="1560605351640" duration="16773000" />
+      <workItem from="1560677225231" duration="7614000" />
+      <workItem from="1561046830964" duration="42987000" />
+      <workItem from="1561306218107" duration="570000" />
+      <workItem from="1561306945115" duration="1465000" />
+      <workItem from="1561308534102" duration="399000" />
+      <workItem from="1561309055691" duration="368000" />
+      <workItem from="1561309562877" duration="1154000" />
+      <workItem from="1644674050572" duration="12170000" />
     </task>
     <task id="LOCAL-00001" summary="GA(Genatic Rep. , population intialization, Fitness(First-part) )">
       <created>1554145749295</created>
@@ -1324,7 +475,21 @@
       <option name="project" value="LOCAL" />
       <updated>1554841333294</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="last submition of the project">
+      <created>1559072282439</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1559072282439</updated>
+    </task>
+    <task id="LOCAL-00005" summary="30-5-2019 , fix bugs and creating timetable constraint + external courses + fix auth / + changing full template">
+      <created>1559182899423</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1559182899423</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1333,7 +498,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="322352000" />
+    <option name="totallyTimeSpent" value="442869000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1345,15 +510,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49484536" visible="true" weight="0.18322147" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49484536" visible="true" weight="0.2549168" />
       <window_info id="Structure" order="1" sideWeight="0.5051546" side_tool="true" weight="0.2080537" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32733223" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49798658" weight="0.44192636" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -1361,10 +524,11 @@
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932885" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49932885" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49597314" visible="true" weight="0.24645892" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49932885" weight="0.2569558" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49597314" visible="true" weight="0.2831424" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50402683" side_tool="true" weight="0.203966" />
       <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="bottom" id="TypeScript" order="13" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -1372,22 +536,23 @@
       <window_info anchor="right" id="Database" order="4" weight="0.3295302" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49484536" visible="true" weight="0.2261745" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49484536" visible="true" weight="0.23600605" />
       <window_info id="Structure" order="1" sideWeight="0.5051546" side_tool="true" weight="0.2080537" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32733223" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49798658" weight="0.14730878" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49798658" weight="0.44192636" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932885" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4986577" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4966443" visible="true" weight="0.11756374" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50201344" side_tool="true" weight="0.44617563" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49932885" weight="0.2569558" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49597314" visible="true" weight="0.26350245" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50402683" side_tool="true" weight="0.203966" />
       <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="bottom" id="TypeScript" order="13" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -1396,14 +561,40 @@
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
     <MESSAGE value="a" />
     <MESSAGE value="GA(Genatic Rep. , population intialization, Fitness(First-part) )" />
     <MESSAGE value="Fitness Function" />
     <MESSAGE value="(Course constrain added)(department id is added)(Semester constrain modifications)" />
-    <option name="LAST_COMMIT_MESSAGE" value="(Course constrain added)(department id is added)(Semester constrain modifications)" />
+    <MESSAGE value="last submition of the project" />
+    <MESSAGE value="30-5-2019 , fix bugs and creating timetable constraint + external courses + fix auth / + changing full template" />
+    <option name="LAST_COMMIT_MESSAGE" value="30-5-2019 , fix bugs and creating timetable constraint + external courses + fix auth / + changing full template" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1438,113 +629,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Models/Instructor.php" />
-    <entry file="file://$PROJECT_DIR$/app/Models/OfferedCourse.php" />
-    <entry file="file://$PROJECT_DIR$/database/factories/AdministratorFactory.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Administrator.php" />
-    <entry file="file://$PROJECT_DIR$/app/Administrator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-237" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ConstrainHour.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Generator.php" />
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_03_27_163938_create_program_curriculum_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_03_27_163938_create_rooms_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/InstructorFactory.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret column="39829" selection-start-column="39829" selection-end-column="39829" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Instructor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Genatic-Algotrthm/FitnessFunction.php" />
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Genatic-Algotrthm/Fitness-Function.blade.php" />
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Genatic-Algotrthm/FitnessFunction.blade.php" />
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Genatic-Algotrthm/Fitness-Function.php" />
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_07_135833_add_event_type_to_offered_courses.php" />
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Connection.php" />
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_03_27_163938_create_hours_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_03_27_163941_add_foreign_keys_to_constrain_hours_table.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_03_27_163938_create_offered_courses_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../novaGrad/app/Http/Controllers/Auth/VerificationController.php" />
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php" />
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/ssa.php" />
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php" />
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php" />
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Collection.php" />
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Route.php" />
     <entry file="file://$PROJECT_DIR$/app/Room.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
           <caret line="34" column="16" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/SelectionMethod.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/offered_course/browser.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/CrossOver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
-          <folding>
-            <element signature="e#147#202#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1557,30 +645,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/factories/UserFactory.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#7#389#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/factories/ProgramCurriculumFactory.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1603,55 +667,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/offered_course/new.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="66" column="10" lean-forward="true" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/instructor/table.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2516">
-          <caret line="148" column="46" selection-start-line="148" selection-start-column="46" selection-end-line="148" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/instructor/Constrains.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="584" lean-forward="true" selection-start-line="584" selection-end-line="584" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="43" column="3" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ProgramCurriculum.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="34" column="22" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/OfferedCourse.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="60" column="51" selection-start-line="60" selection-start-column="51" selection-end-line="60" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/instructor/Constrains.blade.php" />
     <entry file="file://$PROJECT_DIR$/app/Department.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -1659,17 +675,312 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/Fitness_Function.php">
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/83bc164f1afcdc76be3464311abf33415663aa7f.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="158" column="13" selection-start-line="158" selection-start-column="13" selection-end-line="158" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/9928156996426bbb584a3aaaf86f635e69f70b92.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="239" column="7" selection-start-line="239" selection-start-column="7" selection-end-line="239" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/external_constraint/test.blade.php" />
+    <entry file="file://$PROJECT_DIR$/routes/channels.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/AuthServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Roles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/console.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/test.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="46" column="9" lean-forward="true" selection-start-line="39" selection-start-column="6" selection-end-line="46" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/OtherDepartmentOfferedCourse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="24" column="34" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/OfferedCourse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="90" column="24" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/debugbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/OtherDepartmentConstraint.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="40" column="84" selection-start-line="40" selection-start-column="84" selection-end-line="40" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ProgramCurriculum.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="53" column="35" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="118" column="1" selection-start-line="118" selection-start-column="1" selection-end-line="121" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="48" column="41" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Instructor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="35" column="24" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TimetableController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CourseConstraintController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="26" column="89" selection-start-line="26" selection-start-column="80" selection-end-line="26" selection-end-column="89" />
+          <folding>
+            <element signature="e#40#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OfferedCourseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InstructorConstraintController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+          <folding>
+            <element signature="e#40#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="62" column="25" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/instructor/time_constraint.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="28" column="33" selection-start-line="28" selection-end-line="29" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/offered_course/browser.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/time_table/Generate.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/time_table/store.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="157" column="32" selection-start-line="157" selection-start-column="32" selection-end-line="157" selection-end-column="32" />
+          <caret line="224" selection-start-line="224" selection-end-line="224" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/external_constraint/external_constraint.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-123">
+          <caret line="28" column="22" selection-start-line="28" selection-end-line="29" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/instructor/table.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="62" column="23" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/offered_course/new.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="112" column="25" lean-forward="true" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="25" />
+          <folding>
+            <element signature="e#1818#1845#0#HTML" expanded="true" />
+            <element signature="e#1892#1931#0#HTML" expanded="true" />
+            <element signature="e#2035#2104#0#HTML" expanded="true" />
+            <element signature="e#3406#3479#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/SelectionMethod.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="60" column="27" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/Fitness_Function.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/template/template.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="81" column="31" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/time_table/Filtering.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="343" column="22" selection-start-line="343" selection-start-column="22" selection-end-line="343" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/time_table/view.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="204" column="13" selection-start-line="204" selection-end-line="214" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/CrossOver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="88" column="48" selection-start-line="88" selection-start-column="44" selection-end-line="88" selection-end-column="48" />
+          <folding>
+            <element signature="e#147#202#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/Ginatic_Int.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+        <state relative-caret-position="17">
+          <caret line="88" column="39" lean-forward="true" selection-start-line="88" selection-start-column="39" selection-end-line="88" selection-end-column="39" />
           <folding>
             <element signature="e#59#72#0#PHP" expanded="true" />
           </folding>

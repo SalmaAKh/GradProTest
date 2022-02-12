@@ -18,7 +18,7 @@ class CrossOver extends Ginatic_Int
     {
 
         $Child = $TimeTable1;
-/*        highlight_string("<?php\n\$data =\n" . var_export($Child, true) . ";\n?>");*/
+        /*        highlight_string("<?php\n\$data =\n" . var_export($Child, true) . ";\n?>");*/
 
         foreach ($Child as $key=>$childEvents) {
             $Child[$key]['Fitness'] = 0;
@@ -64,32 +64,32 @@ class CrossOver extends Ginatic_Int
 
 
 
-                $Choice1 = rand(0, 1);
-                if ($Choice1) {
-                    $Child[$key]['Time_slot'] = $TimeTable1[$key]['Time_slot'];
-                } else $childEvents['Time_slot'] = $TimeTable2[$key]['Time_slot'];
-                $Choice2 = rand(0, 1);
-                if (!$Choice2) {
-                    $Child[$key]['Rooms'] = $TimeTable1[$key]['Rooms'];
-                } else $Child[$key]['Rooms'] = $TimeTable2[$key]['Rooms'];
+            $Choice1 = rand(0, 1);
+            if ($Choice1) {
+                $Child[$key]['Time_slot'] = $TimeTable1[$key]['Time_slot'];
+            } else $childEvents['Time_slot'] = $TimeTable2[$key]['Time_slot'];
+            $Choice2 = rand(0, 1);
+            if (!$Choice2) {
+                $Child[$key]['Rooms'] = $TimeTable1[$key]['Rooms'];
+            } else $Child[$key]['Rooms'] = $TimeTable2[$key]['Rooms'];
 
 
-                $Ratio1 = rand(0, 100) / 1000;
-                if ($Ratio1 < 0.01) {
-                    if ($Child[$key]['Event_Type'] == 1)
-                        $Child[$key]['Time_slot'] = rand(0, 4) * 5 * rand(0, 3);
-                    else
-                        $Child[$key]['Time_slot'] = rand(0, 24);
-                }
+            $Ratio1 = rand(0, 100) / 1000;
+            if ($Ratio1 < 0.01) {
+                if ($Child[$key]['Event_Type'] == 1)
+                    $Child[$key]['Time_slot'] = rand(0, 4) * 5 +rand(0, 3);
+                else
+                    $Child[$key]['Time_slot'] = rand(0, 24)/* 5 +4*/;
+            }
 
-                $Ratio2 = rand(0, 100) / 1000;
-                if ($Ratio2< 0.01) {
+            $Ratio2 = rand(0, 100) / 1000;
+            if ($Ratio2< 0.01) {
 
-                    if ($childEvents ['Event_Type'] == 3)
-                        $childEvents['Rooms'] = $lab[rand(0, sizeof($lab) - 1)]['room_id'];
-                    else
-                        $childEvents['Rooms'] = $room[rand(0, sizeof($room) - 1)]['room_id'];
-                }
+                if ($childEvents ['Event_Type'] == 3)
+                    $childEvents['Rooms'] = $lab[rand(0, sizeof($lab) - 1)]['room_id'];
+                else
+                    $childEvents['Rooms'] = $room[rand(0, sizeof($room) - 1)]['room_id'];
+            }
 
         }
         return $Child;

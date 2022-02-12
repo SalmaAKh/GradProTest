@@ -25,6 +25,11 @@ Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function()
     Route::get('dashboard', function() {return view('test');} )->name('dashboard');
 
 
+    Route::post('Generate/timetable','TimetableController@generate')->name('time_table.generate')->middleware('role:admin');
+    Route::get('Generate/timetable','TimetableController@generate_view')->name('time_table.generate_view')->middleware('role:admin');
+    Route::post('store/generation','TimetableController@store_generation')->name('timetable.store_generation_table')->middleware('role:admin');
+    Route::get('view/timetable','TimetableController@view')->name('timetable.view')->middleware('role:admin');
+
     Route::get('offered_course/browser', function () {
 
         return view('offered_course.browser');
@@ -37,7 +42,7 @@ Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function()
 
     Route::get('time_table/view', function () {
         return view('time_table.view');
-    });
+    })->name('time_table.view');
 
 
     Route::get('instructor/table', function () {
@@ -52,11 +57,28 @@ Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function()
 
     })->name('instructor.time_constraint')->middleware('role:instructor');
 
+
+    Route::get('instructor/time_table', function () {
+
+        return view('instructor.table');
+
+    })->name('instructor.time_table')->middleware('role:instructor');
+
+
     Route::get('external/constraint', function () {
 
         return view('external_constraint.external_constraint');
 
-    })->name('course.time_constraint')->middleware('role:instructor');
+    })->name('course.time_constraint')->middleware('role:admin');
+
+ Route::get('Filtered/timetable', function () {
+
+        return view('time_table.Filtering');
+
+    })->name('time_table.Filtering')->middleware('role:admin');
+
+
+
 
 
 
