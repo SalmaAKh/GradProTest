@@ -5,33 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cfac00a4-be36-4f30-8c69-94e0c7fafeaf" name="Default Changelist" comment="Fitness Function">
-      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/Laravel_2_12_22__3_54_PM.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/TimetableController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendors/general/dropzone/.idea/github-dropzone.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/time_table/Filtering.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/time_table/Generate.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/time_table/store.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/GradProTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GradProTest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseConstraintController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseConstraintController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/CrossOver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/CrossOver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/Fitness_Function.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/Fitness_Function.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/Ginatic_Int.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Genatic_Algotrthm/Ginatic_Int.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/OtherDepartmentConstraint.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/OtherDepartmentConstraint.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ProgramCurriculum.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ProgramCurriculum.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/external_constraint/external_constraint.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/external_constraint/external_constraint.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/instructor/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/instructor/table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/instructor/time_constraint.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/instructor/time_constraint.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/offered_course/new.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/offered_course/new.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/template/template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/template/template.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/time_table/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/time_table/view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -453,6 +427,7 @@
       <workItem from="1561309055691" duration="368000" />
       <workItem from="1561309562877" duration="1154000" />
       <workItem from="1644674050572" duration="12170000" />
+      <workItem from="1644696169989" duration="819000" />
     </task>
     <task id="LOCAL-00001" summary="GA(Genatic Rep. , population intialization, Fitness(First-part) )">
       <created>1554145749295</created>
@@ -583,6 +558,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
